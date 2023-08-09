@@ -1,0 +1,76 @@
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;">
+	<li class="k-state-active">
+		<span class="panel-bar-label-no-wrap">General</span>
+		<div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;">
+			<div class="config-option-ie11-overflow-fix table-responsive">
+				<table class="custom-config-table">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Link</th>
+							<th>Open in new tab</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>
+								<input type="text" ng-model="config.headerLink.Name" />
+							</td>
+							<td>
+								<input type="text" ng-model="config.headerLink.Url" />
+							</td>
+							<td>
+								<input type="checkbox" ng-model="config.headerLink.IsNewTab" />
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</li>
+	<li>
+		<span class="panel-bar-label-no-wrap">Size</span>
+		<div style="margin: 8px 0;">
+			<input type="number" class="" style="text-align:center;margin-left:10px;margin-right:15px;" ng-model="config.fontSize">Font Size<br />
+		</div>
+              	<div style="margin: 8px 0;">
+			<input type="number" class="" style="text-align:center;margin-left:10px;margin-right:15px;" ng-model="config.buttonWidth">Button width<br />
+		</div>
+              	<div style="margin: 8px 0;">
+			<input type="number" class="" style="text-align:center;margin-left:10px;margin-right:15px;" ng-model="config.buttonHeight">Button height<br />
+		</div>
+	</li>
+    <li>
+        <span class="panel-bar-label-no-wrap">Colors</span>
+        <div style="margin: 8px 0;">
+            <div class="config-option-format">
+                <pv-color-picker id="textColor" ng-model="config.textColor" config="config" colorkeyword="Text">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="backgroundColor" ng-model="config.backgroundColor" config="config" colorkeyword="Background">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="borderColor" ng-model="config.borderColor" config="config" colorkeyword="Border">
+                </pv-color-picker>
+            </div>
+	    <div class="config-option-format">
+                <pv-color-picker id="hoverTextColor" ng-model="config.hoverTextColor" config="config" colorkeyword="Hover Text">
+                </pv-color-picker>
+            </div>
+  	    <div class="config-option-format">
+                <pv-color-picker id="hoverBackgroundColor" ng-model="config.hoverBackgroundColor" config="config" colorkeyword="Hover Background">
+                </pv-color-picker>
+            </div>
+  	    <div class="config-option-format">
+                <pv-color-picker id="shadowColor1" ng-model="config.shadowColor1" config="config" colorkeyword="Hover Shadow 1">
+                </pv-color-picker>
+            </div>
+  	    <div class="config-option-format">
+                <pv-color-picker id="shadowColor2" ng-model="config.shadowColor2" config="config" colorkeyword="Hover Shadow 2">
+                </pv-color-picker>
+            </div>
+        </div>
+    </li>
+</ul>

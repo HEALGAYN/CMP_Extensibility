@@ -1,0 +1,34 @@
+<table>
+    <tr>
+        <td style="background-color: transparent; color:#086996; text-align:left">Turno:</td>
+        <td style="background-color: transparent; color:transparent">s</td>
+        <td><select ng-model="timeSelection" ng-model-options="{ getterSetter: true }" class="ng-pristine ng-valid" style="background-color: transparent">
+                <option ng-click="search()" value="A">TURNO A</option>
+                <option ng-click="search()" value="B">TURNO B</option>
+                <option ng-click="search()" value="C">DÍA</option>              
+            </select>
+        </td>
+        <td style="background-color: transparent; color:transparent">Space</td>
+
+
+        <td style="background-color: transparent; color:#086996; text-align:left">Trimestre:</td>
+        <td style="background-color: transparent; color:transparent">s</td>
+        <td><select ng-model="trim" ng-model-options="{ getterSetter: true }" class="ng-pristine ng-valid" style="background-color: transparent">
+                <option ng-click="searchTrim($index)" ng-repeat="option in config.trimArray" value="{{option.name}}">{{option.name}}</option>              
+            </select>
+        </td>
+        <td style="background-color: transparent; color:transparent">Space</td>
+
+        <td style="background-color: transparent; color:#086996; text-align:left">Mes:</td>
+        <td style="background-color: transparent; color:transparent">s</td>
+        <td>
+            <select ng-model="month" ng-model-options="{ getterSetter: true }" class="ng-pristine ng-valid" style="background-color: transparent">
+                <option ng-click="searchMonth($index)" ng-repeat="option in config.monthlyArray" value="{{option.month}}">{{option.month}}</option>  
+            </select>
+        </td>
+        <td>
+            <button type="button" ng-click="searchMonth($index)" style="text-align:center; background-color: #005da9; border-color: #005da9; border-width: 3px; border-style: solid; border-radius:5px;"> <b style="color: white">BUSCAR</b></button>
+        </td>
+
+    </tr>
+</table>

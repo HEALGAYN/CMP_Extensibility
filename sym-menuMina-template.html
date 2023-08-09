@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index CMP</title>
+    <link rel="stylesheet" href="./Scripts/app/editor/symbols/ext/menu/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./Scripts/app/editor/symbols/ext/menu/css/menu3100.css">
+</head>
+
+<body>
+    <!-- START TOP NAVBAR -->
+    <div onclick="removeActivatedMenuByEvent(event)">
+        <nav id="navTopContainer" class="navbar navbar-expand-md navbar-light bg-light py-2">
+
+            <!-- LOGO -->
+            <a class="navbar-brand" href="https://pisystem.cmp.cl/PIVision/#/Displays/429?mode=Kiosk&hidetoolbar">
+                <img src="./Scripts/app/editor/symbols/ext/menu/images/logo.png" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" onclick="mainToggleFuntion()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--start Content of top menu-->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul id="navTop" class="navbar-nav">
+                    <!--START PORTAL MINA-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PORTAL MINA
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+
+                            <a id="dropitem-header" class="dropdown-header">VALLE COPIAPO</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/845?mode=Kiosk&hidetoolbar">Mina
+                                CNN</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a id="dropitem-header" class="dropdown-header">VALLE HUASCO</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/728?mode=Kiosk&hidetoolbar">Mina Los
+                                Colorados</a>
+                            <div class="dropdown-divider"></div>
+
+                            <!-- <a id="dropitem-header" class="dropdown-header">VALLE ELQUI</a>
+                            <a id="dropitem" class="dropdown-item">Mina Romeral</a> -->
+                            </a>
+                        </div>
+                    </li>
+
+                    <!--START PORTAL OPERACIONAL-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="https://pisystem.cmp.cl/PIVision/#/Displays/81?mode=Kiosk&hidetoolbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PORTAL OPERACIONAL
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/44?mode=Kiosk&hidetoolbar">VALLE
+                                COPIAPO</a>
+                            <a id="dropitem" class="dropdown-item">Cerro Negro Norte</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/32?mode=Kiosk&hidetoolbar">Planta
+                                Magnetita</a>
+                            <!-- <a id="dropitem" class="dropdown-item">Puerto Punta Totoralillo</a> -->
+                            <div class="dropdown-divider"></div>
+
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/49?mode=Kiosk&hidetoolbar">VALLE
+                                HUASCO</a>
+
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/1088?mode=Kiosk&hidetoolbar">Planta Los Colorados</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/726?mode=Kiosk&hidetoolbar">Planta
+                                Pellets</a>
+                            <!-- <a id="dropitem" class="dropdown-item">Puerto Guacolda II</a>
+                            <a id="dropitem" class="dropdown-item">Puerto las Losas</a> -->
+                            <div class="dropdown-divider"></div>
+
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/58?mode=Kiosk&hidetoolbar">
+                                VALLE ELQUI
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/1087?mode=Kiosk&hidetoolbar">Planta Romeral</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/442?mode=Kiosk&hidetoolbar">Puerto
+                                Guayacan</a>
+                        </div>
+                    </li>
+
+                    <!--START PORTAL EJECUTIVO-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="https://pisystem.cmp.cl/PIVision/#/Displays/616?mode=Kiosk&hidetoolbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PORTAL EJECUTIVO
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/1016?mode=Kiosk&hidetoolbar">CMP OEE</a>
+                            <div class="dropdown-divider"></div>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/615?mode=Kiosk&hidetoolbar">Gestión Copiapo</a>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/602?mode=Kiosk&hidetoolbar">Gestión Huasco</a>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/593?mode=Kiosk&hidetoolbar">Gestión Elqui</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+
+
+                    <!--START PORTAL MEDIO AMBIENTE-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        MEDIO AMBIENTE
+                    </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/686?mode=Kiosk&hidetoolbar">CMP</a>
+
+                            <div class="dropdown-divider"></div>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/696?mode=Kiosk&hidetoolbar">Valle Copiapo</a>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/698?mode=Kiosk&hidetoolbar">Valle Huasco</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/589?mode=Kiosk&hidetoolbar">Emisiones PPL</a>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/697?mode=Kiosk&hidetoolbar">Valle Elqui</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+
+                    <!--START PORTAL RECURSOS HÍDRICOS-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            R. HÍDRICOS
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <div class="dropdown-divider"></div>
+                            <a id="dropitem-header" class="dropdown-header" href="">Valle Copiapo</a>
+                            <div class="dropdown-divider"></div>
+                            <a id="dropitem-header" class="dropdown-header" href="">Valle Huasco</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/1058?mode=Kiosk&hidetoolbar">Aguas Frescas PPL </a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/850?mode=Kiosk&hidetoolbar">Aguas Frescas MLC </a>
+                            <div class="dropdown-divider"></div>
+                            <a id="dropitem-header" class="dropdown-header" href="">Valle Elqui</a>
+
+                        </div>
+                    </li>
+
+                    <!--PORTAL ACTIVOS-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="https://pisystem.cmp.cl/PIVision/#/Displays/659/Overview-Criticidad-Nivel-1?mode=kiosk&hidetoolbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        PORTAL ACTIVOS
+                    </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="./#/Displays/671/Valle-Copiapo---Criticidad?mode=Kiosk&hidetoolbar">
+                            VALLE COPIAPO
+                        </a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/631/Criticidad---Mina-CerroNN?mode=Kiosk&hidetoolbar">Mina CNN</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/677/Criticidad---Planta-CerroNN?mode=Kiosk&hidetoolbar">Planta CNN</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/675/Criticidad---Planta-Mag?mode=Kiosk&hidetoolbar">PM</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/676/Criticidad---Puerto-T?mode=Kiosk&hidetoolbar">PPT</a>
+
+                            <a id="dropitem-header" class="dropdown-header" href="./#/Displays/673/Valle-Huasco---Criticidad?mode=Kiosk&hidetoolbar">
+                            VALLE HUASCO
+                        </a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/687/Criticidad---Mina-MLC?mode=Kiosk&hidetoolbar">Mina MLC</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/681/Criticidad---Planta-MLC?mode=Kiosk&hidetoolbar">Planta MLC</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/688/Criticidad---Planta-PL?mode=Kiosk&hidetoolbar">Planta Pellet</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/680/Criticidad---Puerto-GUAII?mode=Kiosk&hidetoolbar">Puerto Guacolda</a>
+
+                            <a id="dropitem-header" class="dropdown-header" href="./#/Displays/672/Valle-Elqui---Criticidad?mode=Kiosk&hidetoolbar">
+                            VALLE ELQUI
+                        </a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/678/Criticidad---Mina-Romeral?mode=Kiosk&hidetoolbar">Mina Romeral</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/679/Criticidad---Planta-Romeral?mode=Kiosk&hidetoolbar">Planta Romeral</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/689/Criticidad---Puerto-Guayacan?mode=Kiosk&hidetoolbar">Puerto Guayacan</a>
+                            <div class="dropdown-divider"></div>
+                            <a id="dropitem-header" class="dropdown-header" href="http://portalsep.cmp.cl:8081/Index.aspx">
+                            PORTAL SEP
+                        </a>
+                        </div>
+                    </li>
+
+                    <!--START PORTAL Automatización y Control-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="https://pisystem.cmp.cl/PIVision/#/Displays/748?mode=kiosk&hidetoolbar">
+                            PORTAL AyC
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="">
+                                VALLE COPIAPO
+                            </a>
+                            <a id="dropitem-header" class="dropdown-header" href="">
+                                VALLE HUASCO
+                            </a>
+                            <a id="dropitem-header" class="dropdown-header" href="">
+                                VALLE ELQUI
+                            </a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+
+                    </li>
+
+                    <!--START PORTAL MOVIL-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="https://pisystem.cmp.cl/PIVision/#/Displays/57?mode=Kiosk&hidetoolbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PORTAL MOVIL
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/44?mode=Kiosk&hidetoolbar">
+                                VALLE COPIAPO
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/363?mode=Kiosk&hidetoolbar">CNN</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/365?mode=Kiosk&hidetoolbar">PM</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/364?mode=Kiosk&hidetoolbar">PPT</a>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/49?mode=Kiosk&hidetoolbar">
+                                VALLE HUASCO
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/435?mode=Kiosk&hidetoolbar">MLC</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/1074?mode=Kiosk&hidetoolbar">Planta
+                                Pellet</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/437?mode=Kiosk&hidetoolbar">Puerto
+                                Guacolda</a>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/58?mode=Kiosk&hidetoolbar">
+                                VALLE ELQUI
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/438?mode=Kiosk&hidetoolbar">Planta
+                                Chancado</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/439?mode=Kiosk&hidetoolbar">Planta
+                                Concentradora</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/440?mode=Kiosk&hidetoolbar">Planta
+                                Molienda</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/441?mode=Kiosk&hidetoolbar">Puerto
+                                Guayacan</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <!--end content of top menu-->
+        </nav>
+    </div>
+    <!-- END TOP NAVBAR -->
+
+    <!-- START LEFT SIDEBAR -->
+    <div data-component="sidebar">
+        <div id="navLeft-container" class="sidebar">
+            <ul id="navLeft" class="list-group flex-column d-inline-block first-menu">
+                <!-- /.list-group-item -->
+                <li id="navLeft-group-item" class="list-group-item pl-3 py-4">
+                    <a href=""><i class="fa " aria-hidden="true">VC<span class="ml-2 align-middle">Valle
+                                Copiapo</span></i></a>
+                    <ul id="navLeft-subnav" class="list-group flex-column d-inline-block submenu">
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <!-- <a href="https://pisystem.cmp.cl/PIVision/#/Displays/1028?mode=Kiosk&hidetoolbar" class="">Camiones</a> -->
+                            <a href="" class="">Camiones</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/962?mode=Kiosk&hidetoolbar">Todos los Camiones
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/964?mode=Kiosk&hidetoolbar">Camiones Operativos
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/968?mode=Kiosk&hidetoolbar">Camiones Detenidos
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Cargadores</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/1064?mode=Kiosk&hidetoolbar">Todos los Cargadores
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Perforadoras</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/1069?mode=Kiosk&hidetoolbar">Todas las Perforadoras
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="https://pisystem.cmp.cl/PIVision/#/Displays/1079?mode=Kiosk&hidetoolbar" class="">Estado Equipos</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+
+                            </ul>
+                        </li>
+                    </ul>
+
+                </li>
+                <li id="navLeft-group-item" class="list-group-item pl-3 py-4">
+                    <a href=""><i class="fa " aria-hidden="true">VH<span class="ml-2 align-middle">Valle
+                                Huasco</span></i></a>
+                    <ul id="navLeft-subnav" class="list-group flex-column d-inline-block submenu">
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <!-- <a href="https://pisystem.cmp.cl/PIVision/#/Displays/630?mode=Kiosk&hidetoolbar" class="">Camiones</a> -->
+                            <a href="" class="">Camiones</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/836?mode=Kiosk&hidetoolbar">Todos Los Camiones                                       
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/838?mode=Kiosk&hidetoolbar">Camiones
+                                        Operativos
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/839?mode=Kiosk&hidetoolbar">Camiones
+                                        Detenidos
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Cargadores</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/1031?mode=Kiosk&hidetoolbar">Todos Los Cargadores                                      
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Palas</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/893?mode=Kiosk&hidetoolbar">Todas las Palas                                      
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Perforadoras</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/1062?mode=Kiosk&hidetoolbar">Todas las Perforadoras
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="https://pisystem.cmp.cl/PIVision/#/Displays/1080?mode=Kiosk&hidetoolbar" class="">Estado Equipos</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+
+                            </ul>
+                        </li>
+                    </ul>
+
+                </li>
+                <li id="navLeft-group-item" class="list-group-item pl-3 py-4">
+                    <a href=""><i class="fa " aria-hidden="true">VE<span class="ml-2 align-middle">Valle
+                                Elqui</span></i></a>
+                    <ul id="navLeft-subnav" class="list-group flex-column d-inline-block submenu">
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Camiones</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="">Camiones Operativos
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="">Camiones Otros
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Cargadores</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="">Cargadores Operativos
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="">Cargadores Otros
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Palas</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="">Palas Operativos
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="">Palas Otros
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Perforadoras</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="">Perforadoras Operativos
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="">Perforadoras Otros
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </li>
+                <!-- /.submenu -->
+            </ul>
+            <!-- /.first-menu -->
+        </div>
+        <!-- /.sidebar -->
+    </div>
+    <!--END LEFT SIDEBAR -->
+
+
+
+    <script nonce="<%=nonce%>" src="./Scripts/app/editor/symbols/ext/menu/js/tether.min.js"></script>
+    <script nonce="<%=nonce%>" src="./Scripts/app/editor/symbols/ext/menu/js/jquery.min.js"></script>
+    <script nonce="<%=nonce%>" src="./Scripts/app/editor/symbols/ext/menu/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

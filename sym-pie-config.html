@@ -1,0 +1,101 @@
+<label class="flex-align-center" style="margin-top:8px; margin-left: 20px;font-size:14px;">
+	<label>Font Size</label>
+<input type="number" class="" style="margin-left:8px" ng-model="config.fontSize">
+</label>
+<br>
+<div class="c-side-pane t-toolbar">
+    <span style="color:#fff; margin-left:10px;">Background</span>
+</div>
+<div class="config-option-format">
+    <pv-color-picker id="backgroundColor" ng-model="config.backgroundColor" config="config">
+    </pv-color-picker>
+</div>
+<br>
+<div class="c-side-pane t-toolbar">
+    <span style="color:#fff; margin-left:10px;">Outline</span>
+</div>
+<div class="config-option-format">
+    <pv-color-picker id="outlineColor" ng-model="config.outlineColor" config="config">
+    </pv-color-picker>
+</div>
+<br>
+<div class="c-side-pane t-toolbar">
+    <span style="color:#fff; margin-left:10px;">Text</span>
+</div>
+<label class="flex-align-center" style="margin-top:8px; margin-left: 15px;">
+	<input type="number" style="margin-right:8px;text-align:center" ng-model="config.decimalPlaces">Decimal places<br />
+</label>
+<div style="margin: 8px 0;">
+    <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+		<label style="width:100px">Decimal Separator</label>
+    <input type="text" class="" style="margin-left:8px; width: 20px;" ng-model="config.decimalSeparator">
+    </label>
+</div>
+<div style="margin: 8px 0;">
+    <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+		<label style="width:100px">Thousands Separator</label>
+    <input type="text" class="" style="margin-left:8px; width: 20px;" ng-model="config.thousandsSeparator">
+    </label>
+</div>
+<div class="config-option-format">
+    <pv-color-picker id="textColor" ng-model="config.textColor" config="config">
+    </pv-color-picker>
+</div>
+<label class="flex-align-center" style="margin-top:8px; margin-left: 8px;">
+	<input type="checkbox" class="c-config-checkbox"
+		   ng-model="config.showTitle">Show Title<br />
+</label>
+<label class="flex-align-center" style="margin-top:8px; margin-left: 8px;">
+	<input type="checkbox" class="c-config-checkbox"
+		   ng-model="config.showLabels">Show Labels<br />
+</label>
+<label class="flex-align-center" style="margin-top:8px; margin-left: 8px;">
+	<input type="checkbox" class="c-config-checkbox"
+		   ng-model="config.showBullets">Show Cursor<br />
+</label>
+<label class="flex-align-center" style="margin-top:8px; margin-left: 8px;">
+	<input type="checkbox" class="c-config-checkbox"
+		   ng-model="config.showLegend">Show Legend<br />
+		   <div ng-show="config.showLegend" class="config-option-format">
+			<span>Posición</span> <br>
+			<select ng-model="config.legendPosition" ng-model-options="{ getterSetter: true }" config="config" class="config-option-single-row-input ng-pristine ng-valid" style="margin-top: 10px;background-color:transparent;padding:4px;">
+				<option value="top">Arriba</option>
+				<option value="bottom">Abajo</option>
+				<option value="left">Izquierda</option>
+				<option value="right">Derecha</option>
+			</select>
+		</div>
+</label>
+<label class="flex-align-center" style="margin-top:8px; margin-left: 8px;">
+	<input type="checkbox" class="c-config-checkbox"
+		   ng-model="config.donut">Donut<br />
+</label>
+<br>
+
+<li class="k-state-active">
+    <div class="c-side-pane t-toolbar">
+        <span style="color:#fff; margin-left:10px;" class="panel-bar-label-no-wrap">Colores</span>
+    </div>
+    <div style="margin: 8px 0;">
+        <div class="config-option-format">
+            <pv-color-picker id="portionColor1" ng-model="config.portionColor1" config="config" colorkeyword="Porción 1">
+            </pv-color-picker>
+        </div>
+        <div class="config-option-format">
+            <pv-color-picker id="portionColor2" ng-model="config.portionColor2" config="config" colorkeyword="Porción 2">
+            </pv-color-picker>
+        </div>
+        <div class="config-option-format">
+            <pv-color-picker id="portionColor3" ng-model="config.portionColor3" config="config" colorkeyword="Porción 3">
+            </pv-color-picker>
+        </div>
+        <div class="config-option-format">
+            <pv-color-picker id="portionColor4" ng-model="config.portionColor4" config="config" colorkeyword="Porción 4">
+            </pv-color-picker>
+        </div>
+        <div class="config-option-format">
+            <pv-color-picker id="portionColor5" ng-model="config.portionColor5" config="config" colorkeyword="Porción 5">
+            </pv-color-picker>
+        </div>
+    </div>
+</li>

@@ -1,0 +1,10 @@
+#my-button {
+    text-align:center;
+    text-decoration: none;
+    border-width: 3px; 
+    border-style: solid; 
+    border-radius:5px;
+    transition-duration: 0.3s;
+}
+
+

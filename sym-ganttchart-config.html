@@ -1,0 +1,42 @@
+
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;">
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Ejes</span>
+        <div class="config-option-format" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+            <label style="width:100px">Tamaño Texto: </label>
+            <input type="number" class="" style="margin-left:20px;" ng-model="config.fontSizeAxis"> <br/>
+        </div>
+        <div style="margin: 0 15px; padding: 6px 0;">
+            <pv-color-picker colorkeyword="Color Texto" ng-model="config.colorAxis"></pv-color-picker>
+        </div>
+        
+    </li>
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Color Format</span>
+		<div style="margin: 8px 0;">
+			<div  style="margin: 0 15px; padding: 6px 0" ng-repeat="state in config.states">
+				<pv-color-picker colorkeyword="{{state.Name}}" ng-model="config.colors[$index]"></pv-color-picker>	
+			</div>
+		</div>
+	</li>
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Legend</span>
+		<div class="config-option-format" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+			<label style="width:100px">Tamaño Texto: </label>
+            <input type="number" class="" style="margin-left:20px;" ng-model="config.fontSizeLegend"> <br/>
+            <label style="width:100px" >Tamaño Marca:</label>
+            <input type="number" class="" style="margin-left:20px;" ng-model="config.markerSize"> <br />
+            <input type="checkbox" class="c-config-checkbox" ng-model="config.showLegend">Mostrar<br />
+            <pv-color-picker colorkeyword="Color Texto" ng-model="config.colorTextLegend"></pv-color-picker>
+		</div>
+        <br />
+	</li>
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Pop-Up</span>
+        <div class="config-option-format" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+            <label style="width:100px">Tamaño Texto: </label>
+            <input type="number" class="" style="margin-left:20px;" ng-model="config.fontSizeBalloon"> <br/>
+            <pv-color-picker colorkeyword="Color Texto" ng-model="config.colorTextBalloon"></pv-color-picker>
+        </div>
+    </li>
+</ul>

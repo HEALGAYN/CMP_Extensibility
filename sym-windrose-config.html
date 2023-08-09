@@ -1,0 +1,83 @@
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;">
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Configuraciones</span>
+        <div style="margin: 8px 0;">
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label>Título</label>
+                <input ng-show="config.showTitle" type="text" class="" style="text-align:center;margin-left:10px;" ng-model="config.chartTitle">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.showTitle">Mostrar<br />
+            </label>
+            <div ng-show="config.showTitle" style="margin: 8px 0;">
+                <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                    <label style="width:100px">Tamaño título</label>
+                    <input type="number" class="" style="margin-left:8px" ng-model="config.fontSizeTitle">
+                </label>
+            </div>
+            <div ng-show="config.showTitle" class="config-option-format">
+                <pv-color-picker id="colorTitle" ng-model="config.textTitleColor" config="config" colorkeyword="Color Título">
+                </pv-color-picker>
+            </div>
+        </div>
+        <div style="margin: 8px 0;">
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label>Leyenda</label>
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.showLegend">Mostrar<br />
+            </label>
+
+            <div ng-show="config.showLegend" class="config-option-single-row" style="margin:8px 20px; font-size: 14px;">
+                <span class="panel-bar-label-no-wrap">Alineación</span>
+                <select id="seleccion" style="width: 75px;" ng-model="config.legendAlign">
+                    <option value="left">Izquierda</option>
+                    <option value="center">Centro</option>
+                    <option value="right">Derecha</option>
+                </select>
+            </div>
+            <div ng-show="config.showLegend" class="config-option-single-row" style="margin:8px 20px; font-size: 14px;">
+                <span class="panel-bar-label-no-wrap">Orientación</span>
+                <select id="seleccion" style="width: 75px;" ng-model="config.legendLayout">
+                    <option value="vertical">Vertical</option>
+                    <option value="horizontal">Horizontal</option>
+                </select>
+            </div>
+            <div ng-show="config.showLegend" class="config-option-single-row" style="margin:8px 20px; font-size: 14px;">
+                <span class="panel-bar-label-no-wrap">Posición</span>
+                <select id="seleccion" style="width: 75px;" ng-model="config.legendValign">
+                    <option value="top">Arriba</option>
+                    <option value="middle">Centro</option>
+                    <option value="bottom">Abajo</option>
+                </select>
+            </div>
+        </div>
+    </li>
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Ejes</span>
+        <div style="margin: 8px 0;">
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label style="width:100px">Categorías Invertidas</label>
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.reversedStacks"><br />
+            </label>
+            <div class="config-option-format">
+                <pv-color-picker id="colorTitle" ng-model="config.textAxisColor" config="config" colorkeyword="Texto">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="colorTitle" ng-model="config.axisColor" config="config" colorkeyword="Líneas">
+                </pv-color-picker>
+            </div>
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label style="width:100px">Tamaño texto</label>
+                <input type="number" class="" style="margin-left:8px" ng-model="config.fontSize">
+            </label>
+        </div>
+    </li>
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Rangos</span>
+        <input type="number"style="text-align:center;margin-left:10px;" ng-model="config.totalRanges">
+		<div style="margin: 8px 0;">
+			<div  style="margin: 0 15px; padding: 6px 0" ng-repeat="serie in config.series">
+                >=<input type="number"style="text-align:center;margin-left:10px;" ng-model="config.rangeLimits[$index]">
+				<pv-color-picker colorkeyword="" ng-model="config.colors[$index]"></pv-color-picker>	
+			</div>
+		</div>
+	</li>
+</ul>

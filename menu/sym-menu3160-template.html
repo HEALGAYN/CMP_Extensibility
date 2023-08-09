@@ -1,0 +1,685 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index CMP</title>
+    <link rel="stylesheet" href="./Scripts/app/editor/symbols/ext/menu/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./Scripts/app/editor/symbols/ext/menu/css/menuCMP.css">
+</head>
+
+<body>
+    <!-- START TOP NAVBAR -->
+    <div onclick="removeActivatedMenuByEvent(event)">
+        <nav id="navTopContainer" class="navbar navbar-expand-md navbar-light bg-light py-2">
+
+            <!-- LOGO -->
+            <a class="navbar-brand" href="https://pisystem.cmp.cl/PIVision/#/Displays/429?mode=Kiosk&hidetoolbar">
+                <img src="./Scripts/app/editor/symbols/ext/menu/images/logo.png" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"
+                onclick="mainToggleFuntion()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Content of top menu-->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul id="navTop" class="navbar-nav">
+
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown"
+                            href="https://pisystem.cmp.cl/PIVision/#/Displays/81?mode=Kiosk&hidetoolbar" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PORTAL OPERACIONAL
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+
+                            <a id="dropitem-header" class="dropdown-header"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/44?mode=Kiosk&hidetoolbar">VALLE
+                                COPIAPO</a>
+
+                            <a id="dropitem" class="dropdown-item">Cerro Negro Norte</a>
+                            <a id="dropitem" class="dropdown-item"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/32?mode=Kiosk&hidetoolbar"
+                                target="_blank">Planta Magnetita</a>
+                            <a id="dropitem" class="dropdown-item">Puerto Punta Totoralillo</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a id="dropitem-header" class="dropdown-header"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/49?mode=Kiosk&hidetoolbar">VALLE
+                                HUASCO</a>
+
+                            <a id="dropitem" class="dropdown-item">Mina Los Colorados</a>
+                            <a id="dropitem" class="dropdown-item">Planta Pellets</a>
+                            <a id="dropitem" class="dropdown-item">Puerto Guacolda II</a>
+                            <a id="dropitem" class="dropdown-item">Puerto las Losas</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a id="dropitem-header" class="dropdown-header"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/58?mode=Kiosk&hidetoolbar">
+                                VALLE ELQUI
+                            </a>
+                            <a id="dropitem" class="dropdown-item">Mina Pleito</a>
+                            <a id="dropitem" class="dropdown-item" href="">Mina Romeral</a>
+                            <a id="dropitem" class="dropdown-item"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/442?mode=Kiosk&hidetoolbar">Puerto
+                                Guayacan</a>
+                        </div>
+                    </li>
+
+
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            PORTAL EJECUTIVO
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="">CMP</a>
+                            <a id="dropitem" class="dropdown-item" href="#">Valle copiapo</a>
+                            <a id="dropitem" class="dropdown-item" href="#">Valle Huasco</a>
+                            <a id="dropitem" class="dropdown-item" href="#">Valle Elqui</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a id="dropitem-header" class="dropdown-header" href="">PRODUCCIÓN</a>
+                            <a id="dropitem" class="dropdown-item" href="#">Pellet Feed</a>
+                            <a id="dropitem" class="dropdown-item" href="#">Sinter Feed</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+
+
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown"
+                            href="https://pisystem.cmp.cl/PIVision/#/Displays/659/Overview-Criticidad-Nivel-1?mode=kiosk&hidetoolbar"
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PORTAL ACTIVOS
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/630?mode=Kiosk&hidetoolbar">
+                                VALLE COPIAPO
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/631?mode=Kiosk&hidetoolbar">Mina CNN</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/635?mode=Kiosk&hidetoolbar">Planta CNN</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/641?mode=Kiosk&hidetoolbar">PM</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/642?mode=Kiosk&hidetoolbar">PPT</a>
+                            
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/648?mode=Kiosk&hidetoolbar">
+                                VALLE HUASCO
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/651?mode=Kiosk&hidetoolbar">Mina MLC</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/652?mode=Kiosk&hidetoolbar">Planta MLC</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/653?mode=Kiosk&hidetoolbar">Planta Pellet</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/654?mode=Kiosk&hidetoolbar">Puerto Guacolda</a>
+                            
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/643?mode=Kiosk&hidetoolbar">
+                                VALLE ELQUI
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/656?mode=Kiosk&hidetoolbar">Mina Romeral</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/657?mode=Kiosk&hidetoolbar">Planta Romeral</a>                            
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/658?mode=Kiosk&hidetoolbar">Puerto Guayacan</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            PORTAL SEP
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="">VALLE COPIAPO</a>
+                            <a id="dropitem" class="dropdown-item" href="">kpi</a>
+                            <a id="dropitem" class="dropdown-item" href="">Activos</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+
+                    </li>
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown"
+                            href="https://pisystem.cmp.cl/PIVision/#/Displays/57?mode=Kiosk&hidetoolbar" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PORTAL MOVIL
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/44?mode=Kiosk&hidetoolbar">
+                                VALLE COPIAPO
+                            </a>
+                            <a id="dropitem" class="dropdown-item"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/363?mode=Kiosk&hidetoolbar">CNN</a>
+                            <a id="dropitem" class="dropdown-item"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/365?mode=Kiosk&hidetoolbar">PM</a>
+                            <a id="dropitem" class="dropdown-item"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/364?mode=Kiosk&hidetoolbar">PPT</a>
+                            <a id="dropitem-header" class="dropdown-header"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/49?mode=Kiosk&hidetoolbar">
+                                VALLE HUASCO
+                            </a>
+                            <a id="dropitem" class="dropdown-item"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/435?mode=Kiosk&hidetoolbar">MLC</a>
+                            <a id="dropitem" class="dropdown-item"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/436?mode=Kiosk&hidetoolbar">Planta
+                                Pellet</a>
+                            <a id="dropitem" class="dropdown-item"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/437?mode=Kiosk&hidetoolbar">Puerto
+                                Guacolda</a>
+                            <a id="dropitem-header" class="dropdown-header"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/58?mode=Kiosk&hidetoolbar">
+                                VALLE ELQUI
+                            </a>
+                            <a id="dropitem" class="dropdown-item"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/438?mode=Kiosk&hidetoolbar">Planta
+                                Chancado</a>
+                            <a id="dropitem" class="dropdown-item"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/439?mode=Kiosk&hidetoolbar">Planta
+                                Concentradora</a>
+                            <a id="dropitem" class="dropdown-item"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/440?mode=Kiosk&hidetoolbar">Planta
+                                Molienda</a>
+                            <a id="dropitem" class="dropdown-item"
+                                href="https://pisystem.cmp.cl/PIVision/#/Displays/441?mode=Kiosk&hidetoolbar">Puerto
+                                Guayacan</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- END TOP NAVBAR -->
+
+    <!-- START LEFT SIDEBAR -->
+    <div data-component="sidebar">
+        <div id="navLeft-container" class="sidebar">
+            <ul id="navLeft" class="list-group flex-column d-inline-block first-menu">
+                <!-- /.list-group-item -->
+                <li id="navLeft-group-item" class="list-group-item pl-3 py-4">
+                    <a href=""><i class="fa " aria-hidden="true">VC<span class="ml-2 align-middle">Valle
+                                Copiapo</span></i></a>
+
+                    <ul id="navLeft-subnav" class="list-group flex-column d-inline-block submenu">
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">Cerro Negro Norte</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/34?mode=Kiosk&hidetoolbar">Planta
+                                        Chancado</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/120/?mode=Kiosk&hidetoolbar">Rougher
+                                        Primaria</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a
+                                        href="https://pisystem.cmp.cl/PIVision/#/Displays/39/?mode=Kiosk&hidetoolbar">Molienda</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a
+                                        href="https://pisystem.cmp.cl/PIVision/#/Displays/122/?mode=Kiosk&hidetoolbar">Deslamado</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/123?mode=Kiosk&hidetoolbar">Espesador
+                                        de Concentrado</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/46/?mode=Kiosk&hidetoolbar">Espesador
+                                        de Relaves</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/344/?mode=Kiosk&hidetoolbar">Distribución
+                                        de Agua</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a
+                                        href="https://pisystem.cmp.cl/PIVision/#/Displays/48?mode=Kiosk&hidetoolbar">Concentraducto</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">Planta Magnetita</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/32?mode=Kiosk&hidetoolbar">Planta
+                                        Magnetita</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/331?mode=Kiosk&hidetoolbar">Desaguado
+                                        y Repulpeo</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a
+                                        href="https://pisystem.cmp.cl/PIVision/#/Displays/329?mode=Kiosk&hidetoolbar">Molienda</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/127?mode=Kiosk&hidetoolbar">Flotación
+                                        Neumática</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/330?mode=Kiosk&hidetoolbar">Flotación
+                                        Magnética</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/132?mode=Kiosk&hidetoolbar">Planta
+                                        de Aguas</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/327?mode=Kiosk&hidetoolbar">Planta
+                                        Reactivos</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/351?mode=Kiosk&hidetoolbar">Sala
+                                        de Bombas</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">Puerto Punta Totoralillo</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/341?mode=Kiosk&hidetoolbar">Pantalla
+                                        General CNN</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/134?mode=Kiosk&hidetoolbar">Pantalla
+                                        General PM</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/135?mode=Kiosk&hidetoolbar">Filtro
+                                        Cerámico 1</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/136?mode=Kiosk&hidetoolbar">Filtro
+                                        Cerámico 2</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/137?mode=Kiosk&hidetoolbar">Filtro
+                                        Cerámico 3</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/138?mode=Kiosk&hidetoolbar">Filtro
+                                        Cerámico 4</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/139?mode=Kiosk&hidetoolbar">Filtro
+                                        Cerámico 5</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/140?mode=Kiosk&hidetoolbar">Filtro
+                                        Cerámico 6</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/141?mode=Kiosk&hidetoolbar">Filtro
+                                        Cerámico 7</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/343?mode=Kiosk&hidetoolbar">Filtro
+                                        de Aguas</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a
+                                        href="https://pisystem.cmp.cl/PIVision/#/Displays/54?mode=Kiosk&hidetoolbar">Embarque</a>
+                                </li>
+                            </ul>
+
+                        </li>
+                    </ul> <!-- /.submenu -->
+                </li>
+                <li id="navLeft-group-item" class="list-group-item pl-3 py-4">
+                    <a href=""><i class="fa " aria-hidden="true">VH<span class="ml-2 align-middle">Valle
+                                Huasco</span></i></a>
+                    <ul id="navLeft-subnav" class="list-group flex-column d-inline-block submenu">
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Mina los Colorados</a>
+
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/461?mode=Kiosk&hidetoolbar">Chancado
+                                        Overview
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/462?mode=Kiosk&hidetoolbar">Chancado
+                                        Clasificación Área 82
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/463?mode=Kiosk&hidetoolbar">Chancado
+                                        Clasificación Área 52
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/464?mode=Kiosk&hidetoolbar">Conc.
+                                        Magnética Área 82
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/465?mode=Kiosk&hidetoolbar">Conc.
+                                        Magnética Área 52
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/466?mode=Kiosk&hidetoolbar">Conc.
+                                        Magnética Área 61
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/467?mode=Kiosk&hidetoolbar">Acopio
+                                        y Carguío Área 55
+                                    </a>
+                                </li>
+                            </ul>
+
+                        </li> <!-- end Posts -->
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Planta Pellets Concentradora</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/478?mode=Kiosk&hidetoolbar">Molienda
+                                        Línea 1</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/477?mode=Kiosk&hidetoolbar">Molienda
+                                        Línea 2</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/482?mode=Kiosk&hidetoolbar">Molienda
+                                        Línea 3</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/484?mode=Kiosk&hidetoolbar">Molienda
+                                        Línea 4</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/479?mode=Kiosk&hidetoolbar">Conc.
+                                        Magnética Línea 1</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/480?mode=Kiosk&hidetoolbar">Conc.
+                                        Magnética Línea 2</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/483?mode=Kiosk&hidetoolbar">Conc.
+                                        Magnética Línea 3</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/551?mode=Kiosk&hidetoolbar">Conc.
+                                        Magnética Línea 4</a>
+                                </li>
+                            </ul>
+                        </li> <!-- end Blog Assist -->
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Planta Pellets Peletización</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/485?mode=Kiosk&hidetoolbar">Filtrado
+                                        1</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/486?mode=Kiosk&hidetoolbar">Filtrado
+                                        2</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/487?mode=Kiosk&hidetoolbar">Filtrado
+                                        3</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/490?mode=Kiosk&hidetoolbar">Balling
+                                        1</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/492?mode=Kiosk&hidetoolbar">Balling
+                                        2</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/493?mode=Kiosk&hidetoolbar">End.
+                                        Térmico 1</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/501?mode=Kiosk&hidetoolbar">End.
+                                        Térmico 2</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/514?mode=Kiosk&hidetoolbar">End.
+                                        Térmico 3</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/515?mode=Kiosk&hidetoolbar">End.
+                                        Térmico 4</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/517?mode=Kiosk&hidetoolbar">End.
+                                        Térmico 5</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/520?mode=Kiosk&hidetoolbar">Relave
+                                        1</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/521?mode=Kiosk&hidetoolbar">Relave
+                                        2</a>
+                                </li>
+                            </ul>
+
+                        </li> <!-- end Blog Assist -->
+
+
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Puerto Guacolda</a>
+
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/475?mode=Kiosk&hidetoolbar">Recepción
+                                        y Apilamiento</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a
+                                        href="https://pisystem.cmp.cl/PIVision/#/Displays/476?mode=Kiosk&hidetoolbar">Embarque</a>
+                                </li>
+                            </ul>
+
+                        </li> <!-- end Pages -->
+
+                    </ul> <!-- /.submenu -->
+                </li>
+                <li id="navLeft-group-item" class="list-group-item pl-3 py-4">
+                    <a href=""><i class="fa " aria-hidden="true">VE<span class="ml-2 align-middle">Valle
+                                Elqui</span></i></a>
+                    <ul id="navLeft-subnav" class="list-group flex-column d-inline-block submenu">
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Mina Pleito</a>
+                        </li> <!-- end Posts -->
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Chancado el Romeral</a>
+
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/415?mode=Kiosk&hidetoolbar">Flow
+                                        Sheet Chancado</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/385?mode=Kiosk&hidetoolbar">Chancado
+                                        Primario</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/384?mode=Kiosk&hidetoolbar">Chancado
+                                        Secundario</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/383?mode=Kiosk&hidetoolbar">Chancado
+                                        Terciario</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a
+                                        href="https://pisystem.cmp.cl/PIVision/#/Displays/394?mode=Kiosk&hidetoolbar">Coobers</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Molienda el Romeral</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/413?mode=Kiosk&hidetoolbar">Flow
+                                        Sheet Molienda</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a
+                                        href="https://pisystem.cmp.cl/PIVision/#/Displays/417?mode=Kiosk&hidetoolbar">Repulpeo</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/371?mode=Kiosk&hidetoolbar">Alimentación
+                                        y Molienda</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/380?mode=Kiosk&hidetoolbar">Molino
+                                        Antiguo</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/444?mode=Kiosk&hidetoolbar">Concentradores
+                                        Magnéticos</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/381?mode=Kiosk&hidetoolbar">Baterías
+                                        Magnéticas</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a
+                                        href="https://pisystem.cmp.cl/PIVision/#/Displays/377?mode=Kiosk&hidetoolbar">Hidroseparadores</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/418?mode=Kiosk&hidetoolbar">Espesador
+                                        Concentrado</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/372?mode=Kiosk&hidetoolbar">Filtro
+                                        de Disco</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/379?mode=Kiosk&hidetoolbar">Cajón
+                                        Sello</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/419?mode=Kiosk&hidetoolbar">Espesador
+                                        Molienda</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/375?mode=Kiosk&hidetoolbar">Re
+                                        Impulsión de Agua</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/376?mode=Kiosk&hidetoolbar">Tranque
+                                        El Trigo</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/411?mode=Kiosk&hidetoolbar">Estanque
+                                        5</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/412?mode=Kiosk&hidetoolbar">Molienda
+                                        Floculante</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="" class="">Concentradora el Romeral</a>
+
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/370?mode=Kiosk&hidetoolbar">Flow
+                                        Sheet Concentradora</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/398?mode=Kiosk&hidetoolbar">Cajón
+                                        Distribuidor</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/405?mode=Kiosk&hidetoolbar">Harneros
+                                        Desaguadores</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/395?mode=Kiosk&hidetoolbar">Inicio
+                                        Concentradora</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/378?mode=Kiosk&hidetoolbar">Concentrador
+                                        Magnético</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/406?mode=Kiosk&hidetoolbar">Espesador
+                                        Concentrado</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a
+                                        href="https://pisystem.cmp.cl/PIVision/#/Displays/451?mode=Kiosk&hidetoolbar">Harneado</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/374?mode=Kiosk&hidetoolbar">Cajón
+                                        Bombeo</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a
+                                        href="https://pisystem.cmp.cl/PIVision/#/Displays/404?mode=Kiosk&hidetoolbar">Productos</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/373?mode=Kiosk&hidetoolbar">Prensa
+                                        Rodillos</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a
+                                        href="https://pisystem.cmp.cl/PIVision/#/Displays/407?mode=Kiosk&hidetoolbar">Rechazos</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- end Blog Assist -->
+
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="https://pisystem.cmp.cl/PIVision/#/Displays/442?mode=Kiosk&hidetoolbar"
+                                class="">Puerto Guayacan</a>
+                        </li>
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="https://pisystem.cmp.cl/PIVision/#/Displays/442?mode=Kiosk&hidetoolbar"
+                                class="">Servicios Generales</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/375?mode=Kiosk&hidetoolbar">Re
+                                        Impulsión de Agua</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/376?mode=Kiosk&hidetoolbar">Tranque
+                                        El Trigo</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/411?mode=Kiosk&hidetoolbar">Estanque
+                                        5</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="https://pisystem.cmp.cl/PIVision/#/Displays/412?mode=Kiosk&hidetoolbar">Molienda
+                                        Floculante</a>
+                                </li>
+                            </ul>
+                        </li><!-- end Pages -->
+
+                    </ul> <!-- /.submenu -->
+                </li>
+                <!-- /.list-group-item -->
+            </ul> <!-- /.first-menu -->
+        </div> <!-- /.sidebar -->
+    </div>
+    <!--END LEFT SIDEBAR -->
+
+
+
+    <script nonce="<%=nonce%>" src="./Scripts/app/editor/symbols/ext/menu/js/tether.min.js"></script>
+    <script nonce="<%=nonce%>" src="./Scripts/app/editor/symbols/ext/menu/js/jquery.min.js"></script>
+    <script nonce="<%=nonce%>" src="./Scripts/app/editor/symbols/ext/menu/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

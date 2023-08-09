@@ -1,0 +1,18 @@
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;"> 
+	<li class="k-state-active"> 
+		<span class="panel-bar-label-no-wrap">Configuration</span>
+		<div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"> 
+			<div class="config-option-ie11-overflow-fix"> 
+				<div class="config-label">Graphic style:</div>
+				<select id="seleccion" ng-model="config.typeChart" ng-change="unitChanged()">
+					<option value="line">Line</option>
+					<option value="spline">Spline</option>
+					<option value="bar">Bar</option>
+					<option value="column">Column</option>
+					<option value="area">Area</option>
+					<option value="scatter">Scatter</option>
+				</select>
+			</div>
+		</div> 
+	</li>
+</ul>

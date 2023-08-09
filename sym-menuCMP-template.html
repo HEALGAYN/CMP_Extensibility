@@ -1,0 +1,705 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Index CMP</title>
+    <link rel="stylesheet" href="./Scripts/app/editor/symbols/ext/menu/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Scripts/app/editor/symbols/ext/menu/css/menuCMP.css">
+</head>
+
+<body>
+    <!-- START TOP NAVBAR -->
+    <div onclick="removeActivatedMenuByEvent(event)">
+        <nav id="navTopContainer" class="menuCMP navbar navbar-expand-md navbar-light bg-light py-2">
+
+            <!-- LOGO -->
+            <a class="navbar-brand" href="https://pisystem.cmp.cl/PIVision/#/Displays/429?mode=Kiosk&hidetoolbar">
+                <img src="./Scripts/app/editor/symbols/ext/menu/images/logo.png" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" onclick="mainToggleFuntion()">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!--Content of top menu-->
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul id="navTop" class="navbar-nav">
+                    <!--START PORTAL MINA-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PORTAL MINA
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+
+                            <a id="dropitem-header" class="dropdown-header">VALLE COPIAPO</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/845?mode=Kiosk&hidetoolbar">Mina
+                                CNN</a>
+                            <div class="dropdown-divider"></div>
+
+                            <a id="dropitem-header" class="dropdown-header">VALLE HUASCO</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/728?mode=Kiosk&hidetoolbar">Mina Los
+                                Colorados</a>
+                            <div class="dropdown-divider"></div>
+
+                            <!-- <a id="dropitem-header" class="dropdown-header">VALLE ELQUI</a>
+                            <a id="dropitem" class="dropdown-item">Mina Romeral</a> -->
+                            </a>
+                        </div>
+                    </li>
+
+                    <!--START PORTAL OPERACIONAL-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="https://pisystem.cmp.cl/PIVision/#/Displays/81?mode=Kiosk&hidetoolbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PORTAL OPERACIONAL
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/44?mode=Kiosk&hidetoolbar">VALLE
+                                COPIAPO</a>
+                            <a id="dropitem" class="dropdown-item">Cerro Negro Norte</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/32?mode=Kiosk&hidetoolbar">Planta
+                                Magnetita</a>
+                            <!-- <a id="dropitem" class="dropdown-item">Puerto Punta Totoralillo</a> -->
+                            <div class="dropdown-divider"></div>
+
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/49?mode=Kiosk&hidetoolbar">VALLE
+                                HUASCO</a>
+
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/1088?mode=Kiosk&hidetoolbar">Planta Los Colorados</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/726?mode=Kiosk&hidetoolbar">Planta
+                                Pellets</a>
+                            <!-- <a id="dropitem" class="dropdown-item">Puerto Guacolda II</a>
+                            <a id="dropitem" class="dropdown-item">Puerto las Losas</a> -->
+                            <div class="dropdown-divider"></div>
+
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/58?mode=Kiosk&hidetoolbar">
+                                VALLE ELQUI
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/1087?mode=Kiosk&hidetoolbar">Planta Romeral</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/442?mode=Kiosk&hidetoolbar">Puerto
+                                Guayacan</a>
+                        </div>
+                    </li>
+
+                    <!--START PORTAL EJECUTIVO-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="https://pisystem.cmp.cl/PIVision/#/Displays/616?mode=Kiosk&hidetoolbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PORTAL EJECUTIVO
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/1016?mode=Kiosk&hidetoolbar">CMP
+                                OEE</a>
+                            <div class="dropdown-divider"></div>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/615?mode=Kiosk&hidetoolbar">Gestión
+                                Copiapo</a>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/602?mode=Kiosk&hidetoolbar">Gestión
+                                Huasco</a>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/593?mode=Kiosk&hidetoolbar">Gestión
+                                Elqui</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+
+                    <!--START PORTAL MEDIO AMBIENTE-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            MEDIO AMBIENTE
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/686?mode=Kiosk&hidetoolbar">CMP</a>
+
+                            <div class="dropdown-divider"></div>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/696?mode=Kiosk&hidetoolbar">Valle
+                                Copiapo</a>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/698?mode=Kiosk&hidetoolbar">Valle
+                                Huasco</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/589?mode=Kiosk&hidetoolbar">Emisiones
+                                PPL</a>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/697?mode=Kiosk&hidetoolbar">Valle
+                                Elqui</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+
+                    <!--PORTAL ACTIVOS-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="https://pisystem.cmp.cl/PIVision/#/Displays/659/Overview-Criticidad-Nivel-1?mode=kiosk&hidetoolbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PORTAL ACTIVOS
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="./#/Displays/671/Valle-Copiapo---Criticidad?mode=Kiosk&hidetoolbar">
+                                VALLE COPIAPO
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/631/Criticidad---Mina-CerroNN?mode=Kiosk&hidetoolbar">Mina CNN</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/677/Criticidad---Planta-CerroNN?mode=Kiosk&hidetoolbar">Planta
+                                CNN</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/675/Criticidad---Planta-Mag?mode=Kiosk&hidetoolbar">PM</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/676/Criticidad---Puerto-T?mode=Kiosk&hidetoolbar">PPT</a>
+
+                            <a id="dropitem-header" class="dropdown-header" href="./#/Displays/673/Valle-Huasco---Criticidad?mode=Kiosk&hidetoolbar">
+                                VALLE HUASCO
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/687/Criticidad---Mina-MLC?mode=Kiosk&hidetoolbar">Mina MLC</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/681/Criticidad---Planta-MLC?mode=Kiosk&hidetoolbar">Planta MLC</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/688/Criticidad---Planta-PL?mode=Kiosk&hidetoolbar">Planta Pellet</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/680/Criticidad---Puerto-GUAII?mode=Kiosk&hidetoolbar">Puerto
+                                Guacolda</a>
+
+                            <a id="dropitem-header" class="dropdown-header" href="./#/Displays/672/Valle-Elqui---Criticidad?mode=Kiosk&hidetoolbar">
+                                VALLE ELQUI
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/678/Criticidad---Mina-Romeral?mode=Kiosk&hidetoolbar">Mina
+                                Romeral</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/679/Criticidad---Planta-Romeral?mode=Kiosk&hidetoolbar">Planta
+                                Romeral</a>
+                            <a id="dropitem" class="dropdown-item" href="./#/Displays/689/Criticidad---Puerto-Guayacan?mode=Kiosk&hidetoolbar">Puerto
+                                Guayacan</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+
+                    <!--START PORTAL SEP-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PORTAL SEP
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="http://portalsep.cmp.cl:8081/Index.aspx" target="_blank">Portal Web SEP</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+
+                    </li>
+                    <!--START PORTAL Automatización y Control-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="https://pisystem.cmp.cl/PIVision/#/Displays/748?mode=kiosk&hidetoolbar">
+                            PORTAL AyC
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="">
+                                VALLE COPIAPO
+                            </a>
+                            <a id="dropitem-header" class="dropdown-header" href="">
+                                VALLE HUASCO
+                            </a>
+                            <a id="dropitem-header" class="dropdown-header" href="">
+                                VALLE ELQUI
+                            </a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+
+                    </li>
+
+                    <!--START PORTAL MOVIL-->
+                    <li id="navTop-item" class="nav-item dropdown">
+                        <a class="comm-navbar dropdown" href="https://pisystem.cmp.cl/PIVision/#/Displays/57?mode=Kiosk&hidetoolbar" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            PORTAL MOVIL
+                        </a>
+                        <div id="drops-items" class="dropdown-menu">
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/44?mode=Kiosk&hidetoolbar">
+                                VALLE COPIAPO
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/363?mode=Kiosk&hidetoolbar">CNN</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/365?mode=Kiosk&hidetoolbar">PM</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/364?mode=Kiosk&hidetoolbar">PPT</a>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/49?mode=Kiosk&hidetoolbar">
+                                VALLE HUASCO
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/435?mode=Kiosk&hidetoolbar">MLC</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/1074?mode=Kiosk&hidetoolbar">Planta
+                                Pellet</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/437?mode=Kiosk&hidetoolbar">Puerto
+                                Guacolda</a>
+                            <a id="dropitem-header" class="dropdown-header" href="https://pisystem.cmp.cl/PIVision/#/Displays/58?mode=Kiosk&hidetoolbar">
+                                VALLE ELQUI
+                            </a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/438?mode=Kiosk&hidetoolbar">Planta
+                                Chancado</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/439?mode=Kiosk&hidetoolbar">Planta
+                                Concentradora</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/440?mode=Kiosk&hidetoolbar">Planta
+                                Molienda</a>
+                            <a id="dropitem" class="dropdown-item" href="https://pisystem.cmp.cl/PIVision/#/Displays/441?mode=Kiosk&hidetoolbar">Puerto
+                                Guayacan</a>
+                            <div class="dropdown-divider"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- END TOP NAVBAR -->
+
+    <!-- START LEFT SIDEBAR -->
+    <div data-component="sidebar">
+        <div id="navLeft-container">
+            <ul id="navLeft" class="list-group flex-column d-inline-block first-menu">
+                <!-- Sub Menu Valle Copiapo -->
+                <li id="navLeft-group-item" class="list-group-item pl-3 py-4">
+                    <a href=""><i class="fa " aria-hidden="true">CMP<span class="ml-2 align-middle"></span></i></a>
+                    <ul id="navLeft-subnav" class="list-group flex-column d-inline-block submenu">
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="https://pisystem.cmp.cl/PIVision/#/Displays/603?mode=Kiosk&hidetoolbar">Colectores</a>
+                        </li>
+                    </ul>
+
+                </li>
+                <!-- Sub Menu Valle Copiapo -->
+                <li id="navLeft-group-item" class="list-group-item pl-3 py-4">
+                    <a href=""><i class="fa " aria-hidden="true">VC<span class="ml-2 align-middle">Valle
+                                Copiapo</span></i></a>
+                    <ul id="navLeft-subnav" class="list-group flex-column d-inline-block submenu">
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">Chancadores</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/632/Chancador_Giratorio?mode=kiosk&hidetoolbar&asset=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CChancadores%5C3200_CR_0001%3Ff161a7c6-3f6d-11ed-8e51-3814286e1327">
+                                        3200_CR_0001
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/632/Chancador_Giratorio?mode=kiosk&hidetoolbar&asset=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CChancadores%5C3200_CR_0002%3Ff161a7d6-3f6d-11ed-8e51-3814286e1327">
+                                        3200_CR_0002
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="./#/Displays/655/VC---Correas?mode=Kiosk&hidetoolbar">
+                                Correas</a>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">Espesadores</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=kiosk&hidetoolbar&asset=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CEspesadores%5C3600_TH_0001%3F2a86a606-aa14-11ec-8e3b-a864f17e7c6f">
+                                        3600_TH_0001
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CEspesadores%5C3710_TH_0001%3F2a86a609-aa14-11ec-8e3b-a864f17e7c6f">
+                                        3710_TH_0001
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CEspesadores%5C3710_TH_0002%3F18644b97-7acd-11ec-8e2c-a864f17e7c6f">
+                                        3710_TH_0002
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CEspesadores%5CFS21405%3F6a4e17af-8e60-11ec-8e35-a864f17e7c72">
+                                        FS21405
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CEspesadores%5CFS21510M2%3Fbac60c0f-8e62-11ec-8e35-a864f17e7c72">
+                                        FS21510M2
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CEspesadores%5CFS23135%3F0a34b029-89e1-11ec-8e2f-a864f17e7c6f">
+                                        FS23135
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CEspesadores%5CFS24135_2%3F22fef303-89a3-11ec-8e2f-a864f17e7c6f">
+                                        FS24135_2
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">
+                                Filtros
+                            </a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CFiltros%5CFS_21678_1%3F45fc124a-82d0-11ec-8e2f-a864f17e7c6f">
+                                        FS_21678_1
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CFiltros%5CFS_21678_2%3Fb9b21aa7-82d0-11ec-8e2f-a864f17e7c6f">
+                                        FS_21678_2
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CFiltros%5CFS_23118_1%3F432acd2c-89e4-11ec-8e2f-a864f17e7c6f">
+                                        FS_23118_1
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CFiltros%5CFS_23118_2%3F612d85ae-89e4-11ec-8e2f-a864f17e7c6f">
+                                        FS_23118_2
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CFiltros%5CFS_23118_3%3F612d85b1-89e4-11ec-8e2f-a864f17e7c6f">
+                                        FS_23118_3
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CFiltros%5CFS_24118_4%3Fa322f74a-89a9-11ec-8e2f-a864f17e7c6f">
+                                        FS_24118_4
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CFiltros%5CFS_24118_5%3Fa322f74d-89a9-11ec-8e2f-a864f17e7c6f">
+                                        FS_24118_5
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CFiltros%5CFS_24118_6%3Fa322f750-89a9-11ec-8e2f-a864f17e7c6f">
+                                        FS_24118_6
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CFiltros%5CFS_24118_7%3Fa322f753-89a9-11ec-8e2f-a864f17e7c6f">
+                                        FS_24118_7
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">Molinos</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/629/Molino_Rodillo?mode=kiosk&hidetoolbar&asset=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CMolinos%5C3200_PP_0001%3Fd56a6f39-38dc-11ed-8e51-3814286e1327">
+                                        3200_PP_0001</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/629/Molino_Rodillo?mode=kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CMolinos%5C3200_PP_0002%3Fddf3f9f5-38dc-11ed-8e51-3814286e1327">
+                                        3200_PP_002</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/620/Molino_Bolas?mode=kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CMolinos%5C3400_MM_0001%3F2a86a61f-aa14-11ec-8e3b-a864f17e7c6f">
+                                        3400_MM_0001</a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/620/Molino_Bolas?mode=kiosk&hidetoolbar&asset=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CMolinos%5C3400_MM_0002%3F284625b5-7826-11ec-83c2-145afc3f9770">
+                                        3400_MM_0002 </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/620?mode=kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CMolinos%5CFS_21225_1%3Fe8c11e00-a700-11ec-8e3a-a864f17e7c6f">
+                                        FS_21225_1
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/620?mode=kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVC%5CMolinos%5CFS_21225_2%3F68eecbbb-7e24-11ec-83cd-145afc3f9770">
+                                        FS_21225_2
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- Sub Menu Valle Elqui -->
+                <li id="navLeft-group-item" class="list-group-item pl-3 py-4">
+                    <a href=""><i class="fa " aria-hidden="true">VE<span class="ml-2 align-middle">Valle
+                                Elqui</span></i></a>
+                    <ul id="navLeft-subnav" class="list-group flex-column d-inline-block submenu">
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">Chancadores</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/632/Chancador_Giratorio?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVE%5CChancadores%5CRA_11%3F33118eab-3f71-11ed-8e51-3814286e1327">
+                                        RA_11
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/632/Chancador_Giratorio?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVE%5CChancadores%5CRA_12A%3F33118eb4-3f71-11ed-8e51-3814286e1327">
+                                        RA_12A
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/632/Chancador_Giratorio?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVE%5CChancadores%5CRA_12B%3F33118eba-3f71-11ed-8e51-3814286e1327">
+                                        RA_12B
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/632/Chancador_Giratorio?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVE%5CChancadores%5CRA_3%3F33118ec0-3f71-11ed-8e51-3814286e1327">
+                                        RA_3
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="./#/Displays/660/VE---Correas?mode=Kiosk&hidetoolbar">
+                                Correas</a>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">Espesadores</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVE%5CEspesadores%5CFS_12350%3F7a5d673d-b1de-11ec-8e3b-a864f17e7c6f">
+                                        FS_12350
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVE%5CEspesadores%5CFS_14100%3F7a5d6740-b1de-11ec-8e3b-a864f17e7c6f">
+                                        FS_14100
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVE%5CEspesadores%5CRB_64%3F7a5d6743-b1de-11ec-8e3b-a864f17e7c6f">
+                                        RB_64
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="./#/Displays/640/Filtro-Discos?mode=Kiosk&hidetoolbar">
+                                Filtros
+                            </a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVE%5CFiltros%5CFS_13100_3%3F7ed198fe-b1e6-11ec-8e3b-a864f17e7c6f">
+                                        FS_13100_3
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVE%5CFiltros%5CFS_13100_4%3F7ed19901-b1e6-11ec-8e3b-a864f17e7c6f">
+                                        FS_13100_4
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">Molinos</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/620/Molino_Bolas?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVE%5CMolinos%5CFS_11200%3F7a5d6834-b1de-11ec-8e3b-a864f17e7c6f">
+                                        FS_11200
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/620/Molino_Bolas?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVE%5CMolinos%5CFS_11205%3F7a5d6837-b1de-11ec-8e3b-a864f17e7c6f">
+                                        FS_11205
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/629/Molino_Rodillo?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVE%5CMolinos%5CRB_305%3F7ed19906-b1e6-11ec-8e3b-a864f17e7c6f">
+                                        RB_305
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </li>
+
+                <!-- Sub Menu Valle Huasco -->
+                <li id="navLeft-group-item" class="list-group-item pl-3 py-4">
+                    <a href=""><i class="fa " aria-hidden="true">VH<span class="ml-2 align-middle">Valle
+                                Huasco</span></i></a>
+                    <ul id="navLeft-subnav" class="list-group flex-column d-inline-block submenu">
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">Chancadores</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/632/Chancador_Giratorio?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CChancadores%5CFS_51_2401%3F33118e8d-3f71-11ed-8e51-3814286e1327">
+                                        FS_51_2401
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/632/Chancador_Giratorio?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CChancadores%5CFS_52_2402%3F33118e99-3f71-11ed-8e51-3814286e1327">
+                                        FS_52_2402
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/632/Chancador_Giratorio?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CChancadores%5CFS_82_2421%3F33118ea5-3f71-11ed-8e51-3814286e1327">
+                                        FS_82_2421
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="./#/Displays/661/VH---Correas?mode=Kiosk&hidetoolbar">
+                                Correas</a>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">Espesadores</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CEspesadores%5CFS_6230%3F7d68deae-11e7-11ed-8e49-3814286e1327">
+                                        FS_6230
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CEspesadores%5CFS_6244%3F89e31277-11e7-11ed-8e49-3814286e1327">
+                                        FS_6244
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CEspesadores%5CHS_7102_1%3F2ce7616b-fd4e-11ec-8e45-a864f17e7c6f">
+                                        HS_7102_1
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CEspesadores%5CHS_7102_2%3F2ce7616e-fd4e-11ec-8e45-a864f17e7c6f">
+                                        HS_7102_2
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/634/Espesadores?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CEspesadores%5CHS_7102_3%3F2ce76168-fd4e-11ec-8e45-a864f17e7c6f">
+                                        HS_7102_3
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">
+                                Filtros
+                            </a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CFiltros%5C6039_3_4_5%3F9175e673-11e7-11ed-8e49-3814286e1327">
+                                        6039_3_4_5
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CFiltros%5C7630_4%3F9175e676-11e7-11ed-8e49-3814286e1327">
+                                        7630_4
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CFiltros%5CHS_7107_1%3F2ce7618e-fd4e-11ec-8e45-a864f17e7c6f">
+                                        HS_7107_1
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CFiltros%5CHS_7107_13%3F2ce76191-fd4e-11ec-8e45-a864f17e7c6f">
+                                        HS_7107_13
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CFiltros%5CHS_7107_2%3F2ce76194-fd4e-11ec-8e45-a864f17e7c6f">
+                                        HS_7107_2
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CFiltros%5CHS_7107_3%3F2ce76197-fd4e-11ec-8e45-a864f17e7c6f">
+                                        HS_7107_3
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CFiltros%5CHS_7107_4%3F2ce7619a-fd4e-11ec-8e45-a864f17e7c6f">
+                                        HS_7107_4
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CFiltros%5CHS_7107_5%3F2ce7619d-fd4e-11ec-8e45-a864f17e7c6f">
+                                        HS_7107_5
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CFiltros%5CHS_7107_6%3F2ce761a0-fd4e-11ec-8e45-a864f17e7c6f">
+                                        HS_7107_6
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CFiltros%5CPIT_001%3F9175e66d-11e7-11ed-8e49-3814286e1327">
+                                        PIT_001
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CFiltros%5CPIT_002%3F9175e670-11e7-11ed-8e49-3814286e1327">
+                                        PIT_002
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/633/Filtros?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CFiltros%5CPIT_003%3F9175e66a-11e7-11ed-8e49-3814286e1327">
+                                        PIT_003
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">Molinos</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/629/Molino_Rodillo?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CMolinos%5C7613%3F9175e6c0-11e7-11ed-8e49-3814286e1327">
+                                        7613
+                                    </a>
+                                </li>
+
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/620/Molino_Bolas?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CMolinos%5CHS_6300_1%3F24df75a8-fbe8-11ec-8e45-a864f17e7c6f">
+                                        HS_6300_1
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/620/Molino_Bolas?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CMolinos%5CHS_6300_2%3F24df75ab-fbe8-11ec-8e45-a864f17e7c6f">
+                                        HS_6300_2
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/620/Molino_Bolas?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CMolinos%5CHS_6300_3%3F24df75ae-fbe8-11ec-8e45-a864f17e7c6f">
+                                        HS_6300_3
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/620/Molino_Bolas?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CMolinos%5CHS_6300_4%3F68c8ed05-fc68-11ec-8e45-a864f17e7c6f">
+                                        HS_6300_4
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="">
+                                HPGR</a>
+                            <ul id="navLeft-sSubnav" class="list-group flex-column d-inline-block sub-submenu">
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/629/Molino_Rodillo?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CMolinos%5CFS_52_2501%3Fad968732-02cb-11ed-8e47-3814286e1327">
+                                        FS_52_2501
+                                    </a>
+                                </li>
+                                <li id="navLeft-group-item" class="list-group-item pl-4">
+                                    <a href="./#/Displays/629/Molino_Rodillo?mode=Kiosk&hidetoolbar&rootpath=%5C%5CPIAF.CMP.CL%5CPRODUCCIÓN%5C2.%20Modelo%20de%20Activos%5CVH%5CMolinos%5CFS_82_2502%3F1f039402-f942-11ec-8e45-a864f17e7c6f">
+                                        FS_82_2502
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="https://pisystem.cmp.cl/PIVision/#/Displays/572?mode=kiosk&hidetoolbar">Ventiladores</a>
+
+                        </li>
+                        <li id="navLeft-group-item" class="list-group-item pl-4">
+                            <a href="https://pisystem.cmp.cl/PIVision/#/Displays/592?mode=kiosk&hidetoolbar">Enfriador
+                                Anular</a>
+
+                        </li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <!--END LEFT SIDEBAR -->
+
+    <script nonce="<%=nonce%>" src="./Scripts/app/editor/symbols/ext/menu/js/tether.min.js"></script>
+    <script nonce="<%=nonce%>" src="./Scripts/app/editor/symbols/ext/menu/js/jquery.min.js"></script>
+    <script nonce="<%=nonce%>" src="./Scripts/app/editor/symbols/ext/menu/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

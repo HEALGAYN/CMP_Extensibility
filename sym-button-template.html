@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="./Scripts/app/editor/symbols/ext/menu/css/button.css">
+<a id="my-button" ng-class="custom-cursor-pointer" ng-href="{{config.headerLink.Url}}"  target="{{config.headerLink.IsNewTab ? '_blank' : '_self'}}">{{config.headerLink.Name}} </a>
+
+<style>
+
+#my-button {
+    background-color: {{config.backgroundColor}}; 
+    border-color: {{config.borderColor;}};
+    color: {{config.textColor}};
+    display: block;
+    padding-top : {{config.buttonHeight}}px;
+    padding-bottom : {{config.buttonHeight}}px;
+    width : {{config.buttonWidth}}px;
+    color: {{config.textColor}};
+    font-size: {{config.fontSize}}px;
+    }
+
+#my-button:hover {
+    cursor: pointer;
+    color: {{config.hoverTextColor}};
+    background-color: {{config.hoverBackgroundColor}};
+    box-shadow: 0 2px 6px 0 {{config.shadowColor1}} , 0 7px 8px 0 {{config.shadowColor2}};
+    }
+</style>
