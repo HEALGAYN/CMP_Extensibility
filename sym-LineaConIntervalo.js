@@ -6,11 +6,11 @@
         // look for HTML template and config template files called sym-<typeName>-template.html and sym-<typeName>-config.html
         typeName: 'LineaConIntervalo',
         // Specify the user-friendly name of the symbol that will appear in PI Vision
-        displayName: 'Valor Con Límites',
+        displayName: 'Valor Con Límite',
         // Specify the number of data sources for this symbol; just a single data source or multiple
         datasourceBehavior: CS.Extensibility.Enums.DatasourceBehaviors.Multiple,
         // Specify the location of an image file to use as the icon for this symbol
-        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/line.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/cmp_line.png',
         visObjectType: symbolVis,
         // Specify default configuration for this symbol
         getDefaultConfig: function() {

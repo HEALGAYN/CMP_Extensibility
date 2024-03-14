@@ -1,0 +1,38 @@
+<style>
+.trendElementAdder {
+  overflow: hidden;
+  align-content: flex-start;
+  align-items: flex-start;
+  text-align: left; }
+  .trendElementAdder .dataSource {
+    margin: 10px;
+    padding: 5px 0.01em; }
+    .trendElementAdder .dataSource label {
+      color: white;
+      padding-left: 5px; }
+    .trendElementAdder .dataSource input {
+      transform: translateY(3px);
+      margin-left: 5px; }
+    .trendElementAdder .dataSource .label {
+      padding-left: 5px;
+      padding-bottom: 2px; }
+
+</style>
+
+
+<div id="container" class="trendElementAdder">
+  <div
+    class="dataSource"
+    ng-repeat="value in config.dataSourcesObj track by $index"
+  >
+    <label
+      ><input
+        type="checkbox"
+        ng-model="value.active"
+        ng-change="instance.trendPointEvent.sendEvent(value.path, value.active)"
+      /><span ng-show="config.showLabels" class="label">{{
+        value.label
+      }}</span></label
+    >
+  </div>
+</div>

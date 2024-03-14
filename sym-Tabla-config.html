@@ -1,0 +1,183 @@
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;">
+
+    <li class="k-state-active">
+        <div style="width: 85%; margin: 10px 0 15px 15px">
+        <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+            <input type="checkbox" class="c-config-checkbox" ng-model="config.ShowColumnTime">ver título
+            Tiempo<br />
+        </label>
+        <label style="margin-top:8px; margin-left: 20px;font-size:14px;" ng-show="config.ShowColumnTime">
+            <br />
+            <input type="text" class="" style="text-align:center;margin-left:10px;" ng-model="config.TimeColumnTitle">
+            <br />
+        </label>
+    </div>
+
+        <span class="panel-bar-label-no-wrap">Columnas</span>
+        <div style="margin: 4px 0 0 4px">
+            <div class="trend-config-trace-list" tabindex="0" style="padding: 4px">
+                <div ng-repeat="column in config.Columns track by $index" ng-init="runtimeData.currentTrace = 0"
+                    ng-click="runtimeData.currentTrace = $index"
+                    ng-style="config.Columns.length > 1 && runtimeData.currentTrace === $index && { 'background-color' : '#d5d5d5' }"
+                    class="trend-config-trace-list-item" title="{{column.path}}">{{column.title}}</div>
+            </div>
+
+            <!-- <div class="c-button-default-container"  ng-if="config.Columns.length > 1"> -->
+            <div style="padding: 4px 4px 0 4px; margin-top: 0; margin-bottom: 0" ng-if="config.Columns.length > 1">
+
+                <button type="button" style="min-width: 10px;" class="c-primary-button"
+                    ng-disabled="runtimeData.currentTrace === 0"
+                    ng-click="config.MoveItem(runtimeData.currentTrace, 'up')">
+                    <span class="k-icon k-i-arrow-n"></span>
+                </button>
+                <button type="button" style="min-width: 10px;" class="c-primary-button trend-config-trace-arrange-button"
+                    ng-disabled="runtimeData.currentTrace === config.Columns.length - 1"
+                    ng-click="config.MoveItem(runtimeData.currentTrace, 'down')">
+                    <span class="k-icon k-i-arrow-s"></span>
+                </button>
+                <button type="button" style="min-width: 10px;" class="c-primary-button trend-config-trace-arrange-button"
+                    ng-disabled="runtimeData.currentTrace === 0"
+                    ng-click="config.MoveItem(runtimeData.currentTrace, 'top')">
+                    <span class="k-icon k-i-seek-n"></span>
+                </button>
+                <button type="button" style="min-width: 10px;" class="c-primary-button trend-config-trace-arrange-button"
+                    ng-disabled="runtimeData.currentTrace === config.Columns.length - 1"
+                    ng-click="config.MoveItem(runtimeData.currentTrace, 'bottom')">
+                    <span class="k-icon k-i-seek-s"></span>
+                </button>
+                <button type="button" style="min-width: 10px;"class="c-primary-button trend-config-trace-arrange-button"
+                    ng-click="config.RemoveItem(runtimeData.currentTrace)">
+                    <span class="k-icon k-delete"></span>
+                </button>
+            </div>
+
+            <div style="margin: 4px 0 0 4px">
+                <div class="config-label">Title</div>
+                <input type="text" ng-model="config.Columns[runtimeData.currentTrace].title">
+            </div>
+        </div>
+    </li>
+
+
+    <li class="k-state-disable">
+        <span class="panel-bar-label-no-wrap">Configuración</span>
+
+        <div style="width: 85%; margin: 10px 0 15px 15px">
+            <label for="">Tamaño de fuente</label>
+            <br>
+            <input type="number" min="10" step="1" max="50" ng-model="config.FontSize" style="margin-top: 10px;">
+        </div>
+        <div style="width: 85%; margin: 10px 0 15px 15px">
+            <label for="">Cantidad de decimales</label>
+            <br>
+            <input type="number" min="0" step="1" max="10" ng-model="config.decimalPlaces" style="margin-top: 10px;">
+        </div>
+
+        <!-- <div style="width: 85%; margin: 10px 0 15px 15px">
+            <label for="">Formato de tiempo</label>
+            <br>
+            <select ng-model="config.TimeFormat" name="config-option-list" style="margin-top: 10px;">                
+                <option value="DATE_AND_TIME">Fecha y hora</option>
+                <option value="DATE">Fecha</option>
+              
+            </select>
+        </div> -->
+
+        <div style="width: 85%; margin: 10px 0 15px 15px">
+            <label for="">Formato de tiempo</label>
+            <br>
+            <select  ng-model="config.TimeFormat" name="config-option-list" style="margin-top: 10px;" >                
+                <option  value="DATE">Fecha</option>
+                <option value="TIME">Fecha y hora (HH:mm)</option>
+                <option value="TIME_SECONDS">Fecha y hora (HH:mm:ss) </option>
+            </select>
+        </div>
+
+        <!-- <div style="width: 85%; margin: 10px 0 15px 15px">
+            <label for="">Modo</label>
+            <br>
+            <select ng-model="config.Mode" name="config-option-list" style="margin-top: 10px;">
+                <option value="COMPRESSED">Compressed data</option>
+                <option value="INTERVAL">Intervalos</option>
+                
+            </select>
+        </div>
+
+        <div ng-show="config.Mode === 'INTERVAL'" style="width: 85%; margin: 10px 0 15px 15px">
+            <label for="">Tiempo de intervalo (horas)</label>
+            <br>
+            <input type="number" min="1" step="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                ng-model="config.Interval" style="margin-top: 10px;">
+        </div> -->
+        <div style="width: 85%; margin: 10px 0 15px 15px">
+            <label for="">Modo</label>
+            <br>
+            <select ng-model="config.Mode" name="config-option-list" style="margin-top: 10px;">
+                <option value="COMPRESSED">Compressed data</option>
+                <option value="INTERVAL">Intervalos</option>
+                <!-- <option value="INSIDE">Inside</option> <!-- Nueva opción para el modo 'INSIDE' -->       
+            </select>
+        </div>
+        
+        <div ng-show="config.Mode === 'INTERVAL' " style="width: 85%; margin: 10px 0 15px 15px">
+            <!-- <div ng-show="config.Mode === 'INTERVAL' || config.Mode === 'INSIDE' " style="width: 85%; margin: 10px 0 15px 15px"> -->
+            <label for="">Tiempo de intervalo (horas)</label>
+            <br>
+            <input type="number" min="1" step="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+                ng-model="config.Interval" style="margin-top: 10px;">
+        </div>
+
+        <div style="width: 85%; margin: 10px 0 15px 15px">
+            <label for="">Alineación del texto</label>
+            <br>
+            <select ng-model="config.TextAlign" name="config-option-list" style="margin-top: 10px;">
+                <option value="center">Centro</option>
+                <option value="right">Derecha</option>
+                <option value="left">Izquierda</option>
+            </select>
+        </div>
+
+        <div style="width: 85%; margin: 10px 0 15px 15px">
+            <label for="">Tema</label>
+            <br>
+            <select ng-model="config.Theme" name="config-option-list" style="margin-top: 10px;">
+                <option value="">Claro</option>
+                <option value="dark-theme">Oscuro</option>
+                <option value="grey-theme">Gris</option>
+                <option value="red-theme">Red</option>
+                <option value="blue-theme">Blue</option>
+                <option value="yellow-theme">Yellow</option>
+            </select>
+        </div>
+    </li>
+
+    <li class="k-state-disable">
+        <span class="panel-bar-label-no-wrap">Colores</span>
+        <div style="float: right;width:100%; margin: 10px 0 15px 0px">
+            <pv-color-picker colorkeyword="Maximun Limit Color:" , ng-model="config.MaximumLimit"></pv-color-picker>
+            <pv-color-picker colorkeyword="Maximun Text Color:" , ng-model="config.MaximumTextColor"></pv-color-picker>
+            <hr class="smallBreakerLine">
+        </div>
+        <div style="float: right;width:100%; margin: 10px 0 15px 0px">
+            <pv-color-picker colorkeyword="HiHi Limit Color:" , ng-model="config.HiHiLimit"></pv-color-picker>
+            <pv-color-picker colorkeyword="HiHi Text Color:" , ng-model="config.HiHiTextColor"></pv-color-picker>
+            <hr class="smallBreakerLine">
+        </div>
+        <div style="float: right;width:100%; margin: 10px 0 15px 0px">
+            <pv-color-picker colorkeyword="Hi Limit Color:" , ng-model="config.HiLimit"></pv-color-picker>
+            <pv-color-picker colorkeyword="Hi Text Color:" , ng-model="config.HiTextColor"></pv-color-picker>
+            <hr class="smallBreakerLine">
+        </div>
+        <div style="float: right;width:100%; margin: 10px 0 15px 0px">
+            <pv-color-picker colorkeyword="Lo Limit Color:" , ng-model="config.LoLimit"></pv-color-picker>
+            <pv-color-picker colorkeyword="Lo Text Color:" , ng-model="config.LoTextColor"></pv-color-picker>
+            <hr class="smallBreakerLine">
+        </div>
+        <div style="float: right;width:100%; margin: 10px 0 15px 0px">
+            <pv-color-picker colorkeyword="LoLo Limit Color:" , ng-model="config.LoLoLimit"></pv-color-picker>
+            <pv-color-picker colorkeyword="LoLo Text Color:" , ng-model="config.LoLoTextColor"></pv-color-picker>
+            <hr class="smallBreakerLine">
+        </div>
+
+    </li>
+</ul>

@@ -6,7 +6,7 @@
 
     const definition = {
         typeName: "Windrose",
-        iconUrl: '/Scripts/app/editor/symbols/ext/icons/winrose.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/icons/cmp_windrose.png',
         visObjectType: symbolVis,
         datasourceBehavior: PV.Extensibility.Enums.DatasourceBehaviors.Multiple,
         getDefaultConfig: function() {

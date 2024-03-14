@@ -6,7 +6,7 @@
         typeName: 'Ranking',
         displayName: 'Ranking',
         datasourceBehavior: BS.Extensibility.Enums.DatasourceBehaviors.Multiple,
-        iconUrl: '/Scripts/app/editor/symbols/ext/icons/ranking.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/icons/cmp_ranking.png',
         supportsCollections: true,
         visObjectType: symbolVis,
         getDefaultConfig: function() {

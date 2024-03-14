@@ -9,7 +9,7 @@
         displayname: "Menu OEE",
         visObjectType: symbolVis,
         datasourceBehavior: PV.Extensibility.Enums.DatasourceBehaviors.Single,
-        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/Home.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/cmp_home.png',
         getDefaultConfig: function() {
             return {
                 Height: 60,

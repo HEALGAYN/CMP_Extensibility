@@ -5,7 +5,7 @@
         typeName: 'tonelajeReal',
         displayName: 'Tonelaje Real',
         datasourceBehavior: CS.Extensibility.Enums.DatasourceBehaviors.Multiple,
-        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/tonelajeReal.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/cmp_diferencia.png',
         visObjectType: symbolVis,
         getDefaultConfig: function() {
             return {

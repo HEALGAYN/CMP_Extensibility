@@ -10,7 +10,7 @@
         typeName: "ganttchartv2",
         DisplayName: "Graphic Gantt v2",
         visObjectType: symbolVis,
-        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/gantchart.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/cmp_gantt.png',
         inject: ['webServices', 'timeProvider'],
         supportsCollections: true,
         datasourceBehavior: PV.Extensibility.Enums.DatasourceBehaviors.Single,

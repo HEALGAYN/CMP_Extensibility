@@ -4,7 +4,7 @@
         typeName: 'pie',
         displayName: 'Pie Chart',
         datasourceBehavior: CS.Extensibility.Enums.DatasourceBehaviors.Multiple,
-        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/Donut.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/cmp_pie.png',
         visObjectType: symbolVis,
 
         getDefaultConfig: function() {
@@ -21,11 +21,14 @@
                 showLabels: false,
                 showLegend: true,
                 donut: false,
-                portionColor1: "#122532",
-                portionColor2: "#124353",
-                portionColor3: "#12697e",
-                portionColor4: "#1aa3ac",
-                portionColor5: "#20dad8",
+                portionColor1: "#89D0E6",
+                portionColor2: "#81DAEC",
+                portionColor3: "#00B1E3",
+                portionColor4: "#00B1E3",
+                portionColor5: "#1560BD",
+                portionColor6: "#4682B4",
+                portionColor7: "#1560BD",
+                portionColor8: "#0000CC",
                 decimalPlaces: 1,
                 decimalSeparator: ',',
                 thousandsSeparator: '.',
@@ -83,7 +86,10 @@
             scope.config.portionColor2,
             scope.config.portionColor3,
             scope.config.portionColor4,
-            scope.config.portionColor5
+            scope.config.portionColor5,
+            scope.config.portionColor6,
+            scope.config.portionColor7,
+            scope.config.portionColor8
         ];
 
         setConfigLegend(chart, scope);

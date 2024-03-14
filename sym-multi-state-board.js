@@ -3,10 +3,10 @@
     PV.deriveVisualizationFromBase(symbolVis)
     const definition = {
         typeName: 'multi-state-board',
-        displayName: 'State Board',
+        displayName: 'Boton | 5 estados',
         visObjectType: symbolVis,
         datasourceBehavior: PV.Extensibility.Enums.DatasourceBehaviors.Multiple,
-        iconUrl: '/Scripts/app/editor/symbols/ext/icons/botonAlarma.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/icons/cmp_boton.png',
         getDefaultConfig: function() {
             return {
                 DataShape: 'Table',

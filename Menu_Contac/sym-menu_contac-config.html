@@ -1,0 +1,106 @@
+﻿<!--
+	Contac Ingenieros LTDA.
+-->
+
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;">
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Atributo</span>
+        <div style="width: 85%; margin: 10px 0 15px 15px;">
+            <datasource-config-component title="Listado de tags" datasource-list="runtimeData.rowList"
+                last-selected="runtimeData.currentRow" scope="this.$parent" delete="def.configure.deleteRow"
+                select="def.configure.selectRow" move="def.configure.moveRow">
+            </datasource-config-component>
+        </div>
+    </li>
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Formato General</span>
+        <div style="margin: 0 15px; padding: 6px 0">
+            <span style="display: inline-block; width: 120px;">Orientación Vertical</span>
+            <input style=" display:inline-block ;position: relative;left: 5px;" type="checkbox"
+                title="check: vertital, nocheck: horizontal" ng-model="config.vertical">
+        </div>
+        <div style="margin: 0 15px; padding: 6px 0">
+            <pv-color-picker colorkeyword="Texto Color" ng-model="config.color"></pv-color-picker>
+        </div>
+        <div style="margin: 0 15px; padding: 6px 0">
+            <pv-color-picker colorkeyword="Texto Resaltado" ng-model="config.colorHover"></pv-color-picker>
+        </div>
+        <div style="margin: 0 15px; padding: 6px 0">
+            <pv-color-picker colorkeyword="Color Item" ng-model="config.MenuColor"></pv-color-picker>
+        </div>
+        <div style="margin: 0 15px; padding: 6px 0">
+            <pv-color-picker colorkeyword="Color Resalte" ng-model="config.MenuColorHover"></pv-color-picker>
+        </div>
+    </li>
+
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Formato Menú Principal</span>
+        <div class="config-option-format" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+            <span>Alineación</span> <br>
+            <select ng-model="config.liRootAlign" ng-model-options="{ getterSetter: true }" config="config"
+                class="config-option-single-row-input ng-pristine ng-valid"
+                style="margin-top: 10px;background-color:transparent;padding:4px;">
+                <option value="left">Izquierda</option>
+                <option value="center">Centro</option>
+                <option value="right">Derecha</option>
+            </select>
+        </div>
+        <div style="margin: 0 15px; padding: 6px 0">
+            <span style="display: inline-block; width: 120px;">Tamaño texto</span>
+            <input style="position:relative ;left: 5px;" type="number" min="8" max="32" step="1"
+                title="Tamaño del Texto; va desde 8 a 32" ng-model="config.fontRootSize">
+        </div>
+
+        <div style="margin: 0 15px; padding: 6px 0;">
+            <span style="display: inline-block; width: 120px;">Ancho Boton</span>
+            <input style="position:relative ;left: 5px;" type="number" min="5" max="32" step="1"
+                title="Tamaño del Texto; va desde 5 a 40" ng-model="config.widthNav">
+        </div>
+
+    </li>
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Formato Menú Secundario</span>
+        <div class="config-option-format" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+            <span>Alineación</span> <br>
+            <select ng-model="config.liChildAlign" ng-model-options="{ getterSetter: true }" config="config"
+                class="config-option-single-row-input ng-pristine ng-valid"
+                style="margin-top: 10px;background-color:transparent;padding:4px;">
+                <option value="left">Izquierda</option>
+                <option value="center">Centro</option>
+                <option value="right">Derecha</option>
+            </select>
+        </div>
+        <div style="margin: 0 15px; padding: 6px 0">
+            <span style="display: inline-block; width: 120px;">Tamaño texto</span>
+            <input style="position:relative ;left: 5px;" type="number" min="8" max="32" step="1"
+                title="Tamaño del Texto; va desde 8 a 32" ng-model="config.fontChildSize">
+        </div>
+        <div style="margin: 0 15px; padding: 6px 0;">
+            <span style="display: inline-block; width: 120px;">Ancho Boton</span>
+            <input style="position:relative ;left: 5px;" type="number" min="2" max="32" step="1"
+                title="Tamaño del Texto; va desde 2 a 40" ng-model="config.widthChildNav">
+        </div>
+        <div style="margin: 0 15px; padding: 6px 0">
+            <pv-color-picker colorkeyword="Grid" ng-model="config.colorGrid"></pv-color-picker>
+        </div>
+    </li>
+
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Acerca de</span>
+        <div style="align-content:center; text-align:center">
+            <br>
+            <span style="display: inline-block; text-align: center;">Menú Contac - Versión 1.2.1</span>
+            <br>
+            <span style="display: inline-block; text-align: center;">Contac Ingenieros LTDA</span>
+            <br>
+            <span style="display: inline-block; text-align: center;">&copy; Copyright 2024</span>
+            <br>
+            <br>
+        </div>
+        <div style="align-content:center; text-align:center">
+            <img src="./Scripts/app/editor/symbols/ext/Menu_Contac/icons/logo_contac_s.png"
+                style="width: 80px; display: box; align-content: center;" alt="imagen Logo Contac">
+        </div>
+    </li>
+
+</ul>

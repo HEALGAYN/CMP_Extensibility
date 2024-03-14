@@ -1,0 +1,36 @@
+<ul kendo-panel-bar class="t-side-panel-bgcolor">
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Tipo de Filtro</span>
+        <div class="config-option-single-row">
+            <div>
+                <label class="flex-align-center" style="margin-top:8px; margin-left: 15px;">
+                    <input type="radio" style="margin-right:8px;text-align:center" ng-model="config.selectedView" ng-value="'monthyear'"> Mes y Año
+                </label>
+                <label class="flex-align-center" style="margin-top:8px; margin-left: 15px;">
+                    <input type="radio" style="margin-right:8px;text-align:center" ng-model="config.selectedView" ng-value="'year'"> Año
+                </label>
+            </div>
+        </div>
+
+    </li>
+    <li class="k-state-inactive">
+        <span class="panel-bar-label-no-wrap">Día y Hora Offeset</span>
+        <div class="config-option-single-row">
+            <div class="config-option-ie11-overflow-fix">
+                <label class="flex-align-center" style="margin-top:8px; margin-left: 15px;">
+                    <input type="number" style="margin-right:8px;text-align:center" ng-model="config.HoraStartTime">Hora Start Time<br />
+                </label>
+                <label class="flex-align-center" style="margin-top:8px; margin-left: 15px;">
+                    <input type="number" style="margin-right:8px;text-align:center" ng-model="config.HoraEndTime">Hora End Time<br />
+                </label>
+                <label class="flex-align-center" style="margin-top:8px; margin-left: 15px;">
+                    <input type="number" style="margin-right:8px;text-align:center" ng-model="config.DayStartTime">Offset Day Start Time<br />
+                </label>
+                <label class="flex-align-center" style="margin-top:8px; margin-left: 15px;">
+                    <input type="number" style="margin-right:8px;text-align:center" ng-model="config.DayEndTime">Offset Day End Time<br />
+                </label>
+            </div>
+        </div>
+
+    </li>
+</ul>

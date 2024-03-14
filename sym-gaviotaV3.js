@@ -7,7 +7,7 @@
         displayName: 'Gaviota V3',
         datasourceBehavior: BS.Extensibility.Enums.DatasourceBehaviors.Multiple,
         inject: ['timeProvider'],
-        iconUrl: '/Scripts/app/editor/symbols/ext/icons/gaviota.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/icons/cmp_gaviota.png',
         supportsCollections: true,
         visObjectType: symbolVis,
         getDefaultConfig: function() {

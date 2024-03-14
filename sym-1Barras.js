@@ -3,9 +3,9 @@
 
     const definition = {
         typeName: '1Barras',
-        displayName: '1 Barras vs Target',
+        displayName: '2 valor | Year (Now)',
         datasourceBehavior: CS.Extensibility.Enums.DatasourceBehaviors.Multiple,
-        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/barras.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/cmp_2valores.png',
         visObjectType: symbolVis,
         getDefaultConfig: function() {
             return {
@@ -209,7 +209,7 @@
             }
 
         }
-        console.log('dataarray: ', dataArray)
+        // console.log('dataarray: ', dataArray);
         return dataArray;
     }
 
@@ -236,7 +236,7 @@
                 const dataArray = getDataProvider(scope);
                 if (!chart) {
                     chart = buildChart(container, scope, dataArray);
-                    console.log('provider: ', chart.dataProvider)
+                    // console.log('provider: ', chart.dataProvider)
                 }
                 chart.dataProvider = dataArray;
                 chart.validateData();

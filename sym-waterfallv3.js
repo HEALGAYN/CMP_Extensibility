@@ -6,7 +6,7 @@
         typeName: 'waterfallv3',
         displayName: 'Grafico de Cascada',
         datasourceBehavior: BS.Extensibility.Enums.DatasourceBehaviors.Multiple,
-        iconUrl: '/Scripts/app/editor/symbols/ext/icons/waterfall.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/icons/cmp_cascada.png',
         supportsCollections: true,
         visObjectType: symbolVis,
         getDefaultConfig: function() {

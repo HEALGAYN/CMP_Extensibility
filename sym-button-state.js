@@ -8,7 +8,7 @@
         displayName: 'Boton con estado',
         visObjectType: symbolVis,
         datasourceBehavior: PV.Extensibility.Enums.DatasourceBehaviors.Single,
-        iconUrl: '/Scripts/app/editor/symbols/ext/icons/botonAlarma.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/icons/cmp_boton.png',
         getDefaultConfig: function() {
             return {
                 backgroundColor: 'white',

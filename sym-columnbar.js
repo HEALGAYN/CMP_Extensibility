@@ -1,17 +1,17 @@
-(function (BS) {
+(function(BS) {
     //'use strict';
 
-    function symbolVis() { }
+    function symbolVis() {}
     BS.deriveVisualizationFromBase(symbolVis);
 
     var definition = {
         typeName: 'columnbar',
         displayName: 'Column & Bar',
         datasourceBehavior: BS.Extensibility.Enums.DatasourceBehaviors.Multiple,
-        iconUrl: '/Scripts/app/editor/symbols/ext/icons/bar.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/icons/cmp_barras.png',
         visObjectType: symbolVis,
 
-        getDefaultConfig: function () {
+        getDefaultConfig: function() {
             return {
                 DataShape: 'Table',
                 Height: 300,
@@ -45,7 +45,7 @@
             };
         },
 
-        configOptions: function () {
+        configOptions: function() {
             return [{
                 title: 'Format Symbol',
                 mode: 'format'
@@ -53,7 +53,7 @@
         }
     };
 
-    symbolVis.prototype.init = function (scope, elem) {
+    symbolVis.prototype.init = function(scope, elem) {
         this.onDataUpdate = myCustomDataUpdateFunction;
         this.onConfigChange = myCustomConfigurationChangeFunction;
 
@@ -68,7 +68,7 @@
 
             if (data.Rows[0].Label) {
                 labels = data.Rows.map(
-                    function (item) {
+                    function(item) {
                         var label = item.Label;
                         var posicion = label.indexOf('|');
                         label = label.slice(posicion + 1, label.length);
@@ -82,7 +82,7 @@
 
             if (data.Rows[0].Units) {
                 units = data.Rows.map(
-                    function (item) {
+                    function(item) {
                         var units = item.Units;
                         return {
                             Units: units
@@ -112,25 +112,22 @@
         function createArrayOfChartTitles() {
             var titlesArray;
             if (scope.config.useCustomTitle) {
-                titlesArray = [
-                    {
-                        "text": scope.config.customTitle,
-                        "size": (scope.config.fontSize + 3)
-                    }
-                ];
+                titlesArray = [{
+                    "text": scope.config.customTitle,
+                    "size": (scope.config.fontSize + 3)
+                }];
             } else {
-                titlesArray = [
-                    {
-                        "text": " ",
-                        "bold": true,
-                        "size": (scope.config.fontSize + 4)
-                    }];
+                titlesArray = [{
+                    "text": " ",
+                    "bold": true,
+                    "size": (scope.config.fontSize + 4)
+                }];
             }
             return titlesArray;
         }
 
         function getLabels(datasources) {
-            return datasources.map(function (item) {
+            return datasources.map(function(item) {
                 var isAttribute = /af:/.test(item);
                 var label = isAttribute ? item.match(/\w*\|.*$/)[0] : item.match(/\w+$/)[0];
 
@@ -146,10 +143,11 @@
 
         var chartColors = ["#b8cce4", "#b7dde8", "#41a9c3", "#548dd4", "rgb(11, 100, 126)", "rgb(126, 11, 11)", "rgb(11, 117, 110)", "rgb(19, 38, 110)", "rgb(46, 32, 238)", "rgb(21, 117, 11)"];
         var evenOddColors = [scope.config.evenColor, scope.config.oddColor];
+
         function convertToChartDataFormat(data, labels, units) {
             var itemsmapped =
                 data.Rows.map(
-                    function (item, index) {
+                    function(item, index) {
                         var unit = units[index] ? units[index].Units : "";
                         return {
                             Value: parseFloat("" + item.Value.replace(",", ".")).toFixed(scope.config.decimalPlaces),
@@ -180,18 +178,16 @@
                 //"creditsPosition": "top-right",
                 "rotate": scope.config.useBarsInsteadOfColumns,
                 "fontSize": scope.config.fontSize,
-                "valueAxes": [
-                    {
-                        "position": scope.config.axisPosition,
-                        "inside": false,
-                        "axisAlpha": 1,
-                        "axisColor": scope.config.axesColor,
-                        "fillAlpha": 0.05,
-                        "gridAlpha": 1,
-                        "gridColor": scope.config.gridColor,
-                        "fontSize": 18
-                    }
-                ],
+                "valueAxes": [{
+                    "position": scope.config.axisPosition,
+                    "inside": false,
+                    "axisAlpha": 1,
+                    "axisColor": scope.config.axesColor,
+                    "fillAlpha": 0.05,
+                    "gridAlpha": 1,
+                    "gridColor": scope.config.gridColor,
+                    "fontSize": 18
+                }],
                 "categoryAxis": {
                     "axisAlpha": 1,
                     "axisColor": scope.config.axesColor,
@@ -201,26 +197,24 @@
                     "labelsEnabled": scope.config.showCategoryAxisLabels,
                     "fontSize": scope.config.fontSize
                 },
-                "graphs": [
-                    {
-                        "labelRotation": 360,
-                        "fontSize": 14,
-                        "bold": true,
-                        "type": scope.config.graphType,
-                        "fillAlphas": scope.config.columnOpacity,
-                        "lineAlpha": 10,
-                        "lineColorField": "uniqueColor",
-                        "balloonText": "<b> [[StreamName]] </b><br/>Value: [[Value]]<br/>Time: [[Time]]",
-                        "valueField": "Value",
-                        "fillColorsField": "uniqueColor",
-                        "fontSize": 16,
-                        "showAllValueLabels": true,
-                        "labelPosition": "top",
-                        "labelText": "[[Value]] [[Units]]",
-                        "labelColorField": scope.config.textColor,
-                        "columnWidth": scope.config.columnWidth
-                    }
-                ],
+                "graphs": [{
+                    "labelRotation": 360,
+                    "fontSize": 14,
+                    "bold": true,
+                    "type": scope.config.graphType,
+                    "fillAlphas": scope.config.columnOpacity,
+                    "lineAlpha": 10,
+                    "lineColorField": "uniqueColor",
+                    "balloonText": "<b> [[StreamName]] </b><br/>Value: [[Value]]<br/>Time: [[Time]]",
+                    "valueField": "Value",
+                    "fillColorsField": "uniqueColor",
+                    "fontSize": 16,
+                    "showAllValueLabels": true,
+                    "labelPosition": "top",
+                    "labelText": "[[Value]] [[Units]]",
+                    "labelColorField": scope.config.textColor,
+                    "columnWidth": scope.config.columnWidth
+                }],
                 "dataProvider": "",
                 "categoryField": "StreamName",
                 "chartCursor": {

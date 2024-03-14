@@ -1,0 +1,159 @@
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;">
+
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Display Options to Ranking</span>
+
+        <div style="margin: 8px 0;">
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.showTitle">Ver título<br />
+
+            </label>
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.useCustomTitle">Usar título
+                personalizado<br />
+            </label>
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label style="width:100px">Tamaño Título</label>
+            <input type="number" class="" style="margin-left:8px" ng-model="config.fontSizeTitle">
+            <input type="checkbox" class="c-config-checkbox" ng-model="config.boldTitle">Bold<br />
+            </label>
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                <label>Tamaño texto</label>
+            <input type="number" class="" style="margin-left:8px" ng-model="config.fontSize">
+            </label>
+
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label style="width:100px">Texto Axis</label>
+            <input type="number" class="" style="margin-left:8px" ng-model="config.fontSizeAxis">
+            <input type="checkbox" class="c-config-checkbox" ng-model="config.boldAxis">Bold<br />
+            </label>
+
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label style="width:100px">Rotación Axis</label>
+            <input type="number" class="" style="margin-left:8px" ng-model="config.labelRotation">
+            </label>
+
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label style="width:100px">Texto Valores</label>
+            <input type="number" class="" style="margin-left:8px" ng-model="config.fontSizeValues">
+            <input type="checkbox" class="c-config-checkbox" ng-model="config.showLabels1">Show<br />
+            </label>
+
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label style="width:100px">Texto Etiqueta</label>
+            <input type="number" class="" style="margin-left:8px" ng-model="config.fontSizeBalloon">
+            </label>
+
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label style="width:100px">Ancho Columna</label>
+            <input type="number" class="" style="margin-left:8px" ng-model="config.columnWidth">
+            <input type="checkbox" class="c-config-checkbox" ng-model="config.isRotate">Horizontal<br />
+            </label>
+
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label style="width:100px">Dirección de top</label>
+            <input type="checkbox" class="c-config-checkbox" ng-model="config.isInverted">Invertida<br />
+            </label>
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 15px;">
+                <input type="number" style="margin-right:8px;text-align:center" ng-model="config.decimalPlaces">Decimal
+                places<br />
+            </label>
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label style="width:100px">Decimal Separator</label>
+            <input type="text" class="" style="margin-left:8px; width: 20px;" ng-model="config.decimalSeparator">
+            </label>
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label style="width:100px">Thousands Separator</label>
+            <input type="text" class="" style="margin-left:8px; width: 20px;" ng-model="config.thousandsSeparator">
+            </label>
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.enabledCursor">Ver Cursor<br />
+            </label>
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.showChartScrollBar">Ver Barra de
+                Tiempo<br />
+            </label>
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.showLegend">Ver Leyenda<br />
+            </label>
+
+            <div class="config-option-ie11-overflow-fix">
+                <label class="flex-align-center" ng-show="config.showLegend" style="margin-top:8px; margin-left: 35px;font-size:14px;">Posicion
+                    <select ng-model="config.legendPosition" ng-model-options="{ getterSetter: true }" style="margin-left: 20px;font-size:12px;">
+                        <option value="left">Left</option>
+                        <option value="right">Right</option>
+                        <option value="bottom">Bot</option>
+                    </select>
+                </label>
+            </div>
+        </div>
+        <!-- <div style="margin: 8px 0;">
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <label style="width:100px" >Bullet</label>
+                <input type="number" class="" style="margin-left:8px" ng-model="config.bulletSize">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.bulletEnabled">Show<br/>
+            </label>
+            <div class="config-option-format">
+                <select ng-model="config.shape" ng-model-options="{ getterSetter: true }" config="config" class="config-option-single-row-input ng-pristine ng-valid" style="margin-top: 10px;background-color:transparent;padding:4px;">
+                    <option selected="selected" value="round">Círculo</option>
+                    <option value="square">Cuadrado</option>
+                    <option value="diamond">Diamante</option>
+                </select>
+            </div>
+        </div> -->
+    </li>
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">Colors</span>
+        <div style="margin: 8px 0;">
+            <div class="config-option-format">
+                <pv-color-picker id="textColor" ng-model="config.textColor" config="config" colorkeyword="Text">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="gridColor" ng-model="config.gridColor" config="config" colorkeyword="Grid X">
+                </pv-color-picker>
+            </div>
+
+            <div class="config-option-format">
+                <pv-color-picker id="gridColor1" ng-model="config.gridColor1" config="config" colorkeyword="Grid Y">
+                </pv-color-picker>
+            </div>
+
+            <div class="config-option-format">
+                <pv-color-picker id="backgroundColor" ng-model="config.backgroundColor" config="config" colorkeyword="Background">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="barColor1" ng-model="config.barColor1" config="config" colorkeyword="Barra 1">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="barColor2" ng-model="config.barColor2" config="config" colorkeyword="Positivo">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="barColor3" ng-model="config.barColor3" config="config" colorkeyword="Negativo">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="lineColor" ng-model="config.lineColor" config="config" colorkeyword="Line">
+                </pv-color-picker>
+            </div>
+
+        </div>
+    </li>
+
+</ul>

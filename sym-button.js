@@ -7,7 +7,7 @@
         typeName: 'button',
         visObjectType: symbolVis,
         datasourceBehavior: PV.Extensibility.Enums.DatasourceBehaviors.Single,
-        iconUrl: '/Scripts/app/editor/symbols/ext/icons/boton.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/icons/cmp_boton.png',
         getDefaultConfig: function() {
             return {
                 backgroundColor: 'white',

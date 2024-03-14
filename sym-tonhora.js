@@ -3,10 +3,10 @@
 
     const myCustomSymbolDefinition = {
         typeName: 'tonhora',
-        displayName: 'Toneladas vs Target',
+        displayName: 'Real vs Plan (con Diferencia) | Día',
         datasourceBehavior: CS.Extensibility.Enums.DatasourceBehaviors.Multiple,
         inject: ['timeProvider'],
-        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/barras.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/cmp_diferencia.png',
         visObjectType: symbolVis,
         getDefaultConfig: function() {
             return {

@@ -1,0 +1,51 @@
+<style>.dataSources {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin: 5px 10px;
+  }
+
+  .dataSource {
+    margin: 10px;
+    padding: 5px 0.01em;
+  }
+
+  .dataSource label {
+    padding-left: 5px;
+  }
+
+  .dataSource button {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+    background-color: gray;
+    color: black;
+    margin-left: 5px;
+    transition: all 2s;
+  }
+
+  .dataSource button:active {
+    border: 1px solid gray;
+    background-color: black;
+    color: white;
+  }
+
+  .dataSource .label {
+    padding-left: 5px;
+    padding-bottom: 2px;
+  }</style><ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;"><li class="k-state-active"><span class="panel-bar-label-no-wrap">Configuración</span><div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;"><div class="config-option-ie11-overflow-fix"><!--CODE HERE--><div><label><input type="checkbox" ng-model="config.showLabels"> Mostrar etiquetas</label></div><div class="dataSources"><!--
+          <div
+            class="dataSource"
+            ng-repeat="value in config.dataSourcesObj track by $index"
+          >
+            <label
+              ><button onclick="deleteDataSource(this)">
+                Delete</button
+              ><span class="label">{{ value.label }} </span></label
+            >
+            <script>
+              function deleteDataSource(button, value) {
+                console.log("HERE");
+                console.log(button);
+              }
+            </script>
+            --></div></div></div></li></ul>

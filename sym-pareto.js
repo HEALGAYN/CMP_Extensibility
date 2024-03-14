@@ -8,7 +8,7 @@
         typeName: "pareto",
         visObjectType: symbolVis,
         datasourceBehavior: PV.Extensibility.Enums.DatasourceBehaviors.Single,
-        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/noun_Pareto_diagram_626189.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/cmp_pareto.png',
         getDefaultConfig: function() {
             return {
                 DataShape: "Timeseries",
@@ -17,7 +17,7 @@
                 states: []
             }
         },
-        inject: [ 'webServices' ]
+        inject: ['webServices']
     }
 
     function getConfig() {

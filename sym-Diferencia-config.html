@@ -1,0 +1,416 @@
+<!--//************************************
+// Begin defining a new symbol
+/*
+Empresa: Contac Ingenieros
+Ing. Henry Alejandro Gallardo Yntor
+*/
+//************************************
+-->
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;">
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">General</span>
+        <div style="margin: 8px 0;">
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 15px;">
+                <input type="number" style="margin-right:8px;text-align:center" ng-model="config.numDias">Días
+                Offset<br />
+            </label>
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 15px;">
+                <input type="number" style="margin-right:8px;text-align:center" ng-model="config.fontSize">Tamaño
+                texto<br />
+            </label>
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 15px;">
+                <input type="number" style="margin-right:8px;text-align:center" ng-model="config.decimalPlaces">Tamaño
+                decimales<br />
+            </label>
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.showTitle">Ver título<br />
+
+            </label>
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.useCustomTitle">Usar título
+                personalizado<br />
+
+            </label>
+            <label style="margin-top:8px; margin-left: 20px;font-size:14px;" ng-show="config.useCustomTitle">
+                <br />
+                <input type="text" class="" style="text-align:center;margin-left:10px;" ng-model="config.customTitle">
+                <br />
+            </label>
+        </div>
+    </li>
+    <li>
+        <span class="panel-bar-label-no-wrap">Eje X</span>
+        <div style="margin: 8px 0;">
+
+            <div ng-show="config.showBulletTarget" class="config-option-format">
+                <pv-color-picker id="axisColor" ng-model="config.axisColor" config="config" colorkeyword="Axis Color">
+                </pv-color-picker>
+            </div>
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="number" style="margin-right:8px;text-align:center"
+                    ng-model="config.axisFontSize">Tamaño texto Eje x<br />
+            </label>
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">Posicion Eje X
+                <select ng-model="config.axisPosition" ng-model-options="{ getterSetter: true }"
+                    style="margin-left: 20px;font-size:12px;">
+                    <option selected="selected" value="bottom">Bottom</option>
+                    <option value="top">Top</option>
+                    
+                    <!-- <option value="bottom">Bot</option> -->
+                </select>
+            </label>
+
+            <!-- <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="number" style="margin-right:8px;text-align:center"
+                    ng-model="config.fontSizeBalloon">Tamaño texto Etiquetas<br />
+            </label> -->
+
+
+        </div>
+
+        </div>
+    </li>
+
+    <li>
+        <span class="panel-bar-label-no-wrap">Eje Y</span>
+        <div style="margin: 8px 0;">
+
+            <div ng-show="config.showBulletTarget" class="config-option-format">
+                <pv-color-picker id="axesColor" ng-model="config.axesColor" config="config" colorkeyword="Axes Color">
+                </pv-color-picker>
+            </div>
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="number" style="margin-right:8px;text-align:center"
+                    ng-model="config.axesFontSize">Tamaño texto Eje y<br />
+            </label>
+
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">Posicion Eje Y
+                <select ng-model="config.axesPosition" ng-model-options="{ getterSetter: true }"
+                    style="margin-left: 20px;font-size:12px;">
+                    <option selected="selected" value="left">Left</option>
+                    <option value="right">Right</option>
+                    <!-- <option value="bottom">Bot</option> -->
+                </select>
+            </label>
+        </div>
+    </li>
+
+    <li>
+        <span class="panel-bar-label-no-wrap">Configuración Gráficos</span>
+
+        <div style="margin: 8px 0;">
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="number" style="margin-right:8px;text-align:center"
+                    ng-model="config.terceraDimension">Tamaño 3D<br />
+            </label>
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="number" style="margin-right:8px;text-align:center" ng-model="config.angulo">Tamaño
+                Ángulo<br />
+            </label>
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">Disposición de
+                Barras
+                <select ng-model="config.axesStackType" ng-model-options="{ getterSetter: true }"
+                    style="margin-left: 20px;font-size:12px;">
+                    <option selected="selected" value="regular">Regular</option>
+                    <option value="none">None</option>
+                    <option value="100%">100%</option>|
+                    <option value="3d">3D</option>
+                </select>
+            </label>
+
+            <div style="margin: 8px 0;">
+                <!-- Gráficos -->
+                <div class="config-option-ie11-overflow-fix">
+                    <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">Tipo
+                        Gráfico
+                        1:
+                        <select ng-model="config.typeGraph1" ng-model-options="{ getterSetter: true }"
+                            style="margin-left: 20px;font-size:12px;">
+                            <option selected="selected" value="column">Column</option>
+                            <option value="line">Line</option>
+                            <option value="smoothedLine">Area</option>
+                            <option value="step">Step</option>
+
+                        </select>
+                    </label>
+                </div>
+                <div class="config-option-ie11-overflow-fix">
+                    <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">Tipo
+                        Gráfico
+                        2:
+                        <select ng-model="config.typeGraph2" ng-model-options="{ getterSetter: true }"
+                            style="margin-left: 20px;font-size:12px;">
+                            <option selected="selected" value="column">Column</option>
+                            <option value="line">Line</option>
+                            <option value="smoothedLine">Area</option>
+                            <option value="step">Step</option>
+
+                        </select>
+                    </label>
+                </div>
+                <div class="config-option-ie11-overflow-fix">
+                    <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">Tipo Gráfico 3:
+                        <select ng-model="config.typeGraph3" ng-model-options="{ getterSetter: true }"
+                            style="margin-left: 20px;font-size:12px;">
+                            <option selected="selected" value="column">Column</option>
+                            <option value="line">Line</option>
+                            <option value="smoothedLine">Area</option>
+                            <option value="step">Step</option>
+
+                        </select>
+                    </label>
+                </div>
+
+
+                <!-- Bullet Column 1 -->
+                <!-- <div class="config-option-ie11-overflow-fix">
+                    <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">ver Gráfico 1:
+                        <select ng-model="config.graph1" ng-model-options="{ getterSetter: true }"
+                            style="margin-left: 20px;font-size:12px;">
+                            <option selected="selected" value="true">true</option>
+                            <option value="false">false</option>                           
+
+                        </select>
+                    </label>
+                </div> -->
+                <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                    <input type="checkbox" class="c-config-checkbox" ng-model="config.graph1">Ver Gráfico 1:<br />
+                </label>
+
+                <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                    <input type="checkbox" class="c-config-checkbox" ng-model="config.showBulletColumn1">Ver Bullet Column 1<br />
+                </label>
+                <div class="config-option-ie11-overflow-fix">
+                    <!-- labelText 1 -->
+                    <label ng-show="config.showBulletColumn1" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                        <input type="checkbox" class="c-config-checkbox" ng-model="config.showlabelText1">Ver
+                        Label1<br />
+                    </label>
+                    <label ng-show="config.showBulletColumn1" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">Tipo
+                        <select ng-model="config.bulletShapeColumn1" ng-model-options="{ getterSetter: true }"
+                            style="margin-left: 20px;font-size:12px;">
+                            <option value="round">Round</option>
+                            <option selected="selected" value="square">Square</option>
+                            <option value="diamond">Diamond</option>
+                            <option value="triangleUp">TriangleUp</option>
+                            <option value="triangleDown">TriangleDown</option>
+                        </select>
+                    </label>
+                    <!-- <label ng-show="config.showBulletTarget" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;"> -->
+                    <label ng-show="config.showBulletColumn1" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                        <input type="number" style="margin-right:8px;text-align:center"
+                            ng-model="config.bulletSize1">Tamaño
+                        Bullet 1<br />
+                    </label>
+
+                    <label ng-show="config.showBulletColumn1" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                        <input type="number" style="margin-right:8px;text-align:center"
+                            ng-model="config.fillAlphas1">Oscuridad Área 1<br />
+                    </label>
+                    <label ng-show="config.showBulletColumn1" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                        <input type="number" style="margin-right:8px;text-align:center"
+                            ng-model="config.lineAlpha1">lineAlpha 1<br />
+                    </label>
+
+                    <!-- end labelText 1  -->
+                </div>
+                <!-- end bullet Column  -->
+
+                <!-- Bullet Column 2 -->
+                <!-- <div class="config-option-ie11-overflow-fix">
+                    <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">ver Gráfico 2:
+                        <select ng-model="config.graph2" ng-model-options="{ getterSetter: true }"
+                            style="margin-left: 20px;font-size:12px;">
+                            <option selected="selected" value="true">true</option>
+                            <option value="false">false</option>                           
+
+                        </select>
+                    </label>
+                </div> -->
+                <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                    <input type="checkbox" class="c-config-checkbox" ng-model="config.graph2">Ver Gráfico 2:<br />
+                </label>
+                <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                    <input type="checkbox" class="c-config-checkbox" ng-model="config.showBulletColumn2">Ver Bullet
+                    Column
+                    2<br />
+                </label>
+                <div class="config-option-ie11-overflow-fix">
+                    <label ng-show="config.showBulletColumn2" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                        <input type="checkbox" class="c-config-checkbox" ng-model="config.showlabelText2">Ver
+                        Label 2<br />
+                    </label>
+                    <label ng-show="config.showBulletColumn2" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">Tipo
+                        <select ng-model="config.bulletShapeColumn2" ng-model-options="{ getterSetter: true }"
+                            style="margin-left: 20px;font-size:12px;">
+                            <option value="round">Round</option>
+                            <option selected="selected" value="square">Square</option>
+                            <option value="diamond">Diamond</option>
+                            <option value="triangleUp">TriangleUp</option>
+                            <option value="triangleDown">TriangleDown</option>
+                        </select>
+                    </label>
+                    <label ng-show="config.showBulletColumn2" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                        <input type="number" style="margin-right:8px;text-align:center"
+                            ng-model="config.bulletSize2">Tamaño
+                        Bullet 2<br />
+                    </label>
+
+                    <label ng-show="config.showBulletColumn2" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                        <input type="number" style="margin-right:8px;text-align:center"
+                            ng-model="config.fillAlphas2">Oscuridad Área 2<br />
+                    </label>
+                    <label ng-show="config.showBulletColumn2" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                        <input type="number" style="margin-right:8px;text-align:center"
+                            ng-model="config.lineAlpha2">lineAlpha 2<br />
+                    </label>
+                </div>
+                <!-- end bullet Column  -->
+
+
+                <!-- Bullet Column 3 -->
+                <!-- <div class="config-option-ie11-overflow-fix">
+                    <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">ver Gráfico 3:
+                        <select ng-model="config.graph3" ng-model-options="{ getterSetter: true }"
+                            style="margin-left: 20px;font-size:12px;">
+                            <option selected="selected" value="true">true</option>
+                            <option value="false">false</option>                           
+
+                        </select>
+                    </label>
+                </div> -->
+                <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                    <input type="checkbox" class="c-config-checkbox" ng-model="config.graph3">Ver Gráfico 3:<br />
+                </label>
+                <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                    <input type="checkbox" class="c-config-checkbox" ng-model="config.showBulletColumn3">Ver Bullet Column 3<br />
+                </label>
+                <div class="config-option-ie11-overflow-fix">
+                    <label ng-show="config.showBulletColumn3" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                        <input type="checkbox" class="c-config-checkbox" ng-model="config.showlabelText3">Ver
+                        Label 2<br />
+                    </label>
+                    <label ng-show="config.showBulletColumn3" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">Tipo
+                        <select ng-model="config.bulletShapeColumn3" ng-model-options="{ getterSetter: true }"
+                            style="margin-left: 20px;font-size:12px;">
+                            <option value="round">Round</option>
+                            <option selected="selected" value="square">Square</option>
+                            <option value="diamond">Diamond</option>
+                            <option value="triangleUp">TriangleUp</option>
+                            <option value="triangleDown">TriangleDown</option>
+                        </select>
+                    </label>
+                    <label ng-show="config.showBulletColumn3" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                        <input type="number" style="margin-right:8px;text-align:center"
+                            ng-model="config.bulletSize3">Tamaño Bullet 3<br />
+                    </label>
+
+                    <label ng-show="config.showBulletColumn3" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                        <input type="number" style="margin-right:8px;text-align:center"
+                            ng-model="config.fillAlphas3">Oscuridad Área 3<br />
+                    </label>
+                    <label ng-show="config.showBulletColumn3" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                        <input type="number" style="margin-right:8px;text-align:center"
+                            ng-model="config.lineAlpha3">lineAlpha 3<br />
+                    </label>
+                </div>
+                <!-- end bullet Column  -->
+
+            </div>
+    </li>
+
+    <li>
+        <span class="panel-bar-label-no-wrap">Colores</span>
+        <div style="margin: 8px 0;">
+            <div class="config-option-format">
+                <pv-color-picker id="textColor" ng-model="config.textColor" config="config" colorkeyword="Texto">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="backgroundColor" ng-model="config.backgroundColor" config="config" colorkeyword="Fondo">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="plotAreaFillColor" ng-model="config.plotAreaFillColor" config="config" colorkeyword="Relleno de Area">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="seriesColor1" ng-model="config.seriesColor1" config="config" colorkeyword="seriesColor1">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="seriesColor2" ng-model="config.seriesColor2" config="config" colorkeyword="seriesColor2">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="seriesColor3" ng-model="config.seriesColor3" config="config" colorkeyword="Positivo Color">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="NegativeColor" ng-model="config.NegativeColor" config="config" colorkeyword="Negative Color">
+                </pv-color-picker>
+            </div>
+
+
+
+            <div class="config-option-format">
+                <pv-color-picker id="bulletColor1" ng-model="config.bulletColor1" config="config" colorkeyword="Bullet Color 1">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="bulletColor2" ng-model="config.bulletColor2" config="config" colorkeyword="Bullet Color 2">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="bulletColor3" ng-model="config.bulletColor3" config="config" colorkeyword="Positivo Color">
+                </pv-color-picker>
+            </div>
+            <div class="config-option-format">
+                <pv-color-picker id="NegativeColor" ng-model="config.NegativeColor" config="config" colorkeyword="Negative Color">
+                </pv-color-picker>
+            </div>
+
+
+
+        </div>
+    </li>
+
+
+    <li>
+        <span class="panel-bar-label-no-wrap">Leyenda</span>
+        <div style="margin: 8px 0;">
+            <div class="config-option-format">
+                <pv-color-picker id="textColorLegend" ng-model="config.textColorLegend" config="config" colorkeyword="Texto">
+                </pv-color-picker>
+            </div>
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.showLegend">Ver Leyenda<br />
+            </label>
+            <div class="config-option-ie11-overflow-fix">
+                <label class="flex-align-center" ng-show="config.showLegend" style="margin-top:8px; margin-left: 35px;font-size:14px;">Posicion
+                    <select ng-model="config.legendPosition" ng-model-options="{ getterSetter: true }"
+                        style="margin-left: 20px;font-size:12px;">
+                        <option value="left">Left</option>
+                        <option value="right">Right</option>
+                        <option value="bottom">Bot</option>
+                    </select>
+                </label>
+                <label ng-show="config.showLegend" class="flex-align-center" style="margin-top:8px; margin-left: 35px;font-size:14px;">
+                    <input type="number" style="margin-right:8px;text-align:center"
+                        ng-model="config.fontSizeLegend">Tamaño
+                    texto<br />
+                </label>
+            </div>
+
+            <label class="flex-align-center" style="margin-top:8px; margin-left: 8px;font-size:14px;">
+                <input type="checkbox" class="c-config-checkbox" ng-model="config.showChartScrollBar">Ver Barra de
+                Tiempo<br />
+            </label>
+
+        </div>
+    </li>
+</ul>

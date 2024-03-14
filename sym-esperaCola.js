@@ -6,7 +6,7 @@
         typeName: 'esperaCola',
         displayName: 'Espera en Cola',
         datasourceBehavior: BS.Extensibility.Enums.DatasourceBehaviors.Multiple,
-        iconUrl: '/Scripts/app/editor/symbols/ext/icons/esperavscola.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/icons/cmp_versus.png',
         supportsCollections: true,
         visObjectType: symbolVis,
         getDefaultConfig: function() {

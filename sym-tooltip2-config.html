@@ -1,0 +1,48 @@
+<ul kendo-panel-bar class="t-side-panel-bgcolor" style="font-size: 14px;">
+    <li class="k-state-active">
+        <span class="panel-bar-label-no-wrap">General</span>
+        <div class="config-option-single-row" style="margin:10px 20px; font-size: 14px;">
+            <div class="config-option-ie11-overflow-fix table-responsive">
+                <label for="">Texto</label>
+                <br>
+                <input type="text" style="text-align:center; margin-left:10px; margin-right:15px;" ng-model="config.name"> <br />
+            </div>
+            <div style="width: 85%; margin: 10px 0 15px 15px">
+                <label for="">Fuente del texto</label>
+                <br>
+                <select ng-model="config.font" name="config-option-list" style="margin-top: 10px;">
+                    <option value="Arial">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Book Antiqua">Book Antiqua</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Courier">Courier</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Garamond">Garamond</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Impact">Impact</option>
+                    <option value="Lucida Console">Lucida Console</option>
+                    <option value="Palatino Linotype">Palatino Linotype</option>
+                    <option value="sans-serif">sans-serif</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Verdana">Verdana</option>
+                </select>
+            </div>
+            <div style="width: 85%; margin: 10px 0 15px 15px">
+                <label for="">Tamaño de la letra</label>
+                <pv-color-picker id="textColor" ng-model="config.color" config="config" colorkeyword="Text Color">
+                </pv-color-picker>
+
+            </div>
+            <div style="width: 85%; margin: 10px 0 15px 15px">
+                <label for="">Tamaño de la letra</label>
+                <input type="number" ng-model="config.fontSize" style="margin-top: 10px;" colorkeyword="font Size">
+            </div>
+            <div style="width: 85%; margin: 10px 0 15px 15px">
+                <label for="">Negrita</label>
+                <input type="checkbox" ng-model="config.bold" style="margin-top: 10px; " colorkeyword="Bold">
+            </div>
+        </div>
+    </li>
+</ul>

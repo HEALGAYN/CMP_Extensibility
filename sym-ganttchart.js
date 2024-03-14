@@ -9,7 +9,7 @@
         visObjectType: symbolVis,
         inject: ['webServices', 'timeProvider'],
         datasourceBehavior: PV.Extensibility.Enums.DatasourceBehaviors.Single,
-        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/gantchart.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/cmp_gantt.png',
         supportsCollections: true,
         getDefaultConfig: function() {
             return {

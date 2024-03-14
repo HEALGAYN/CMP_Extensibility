@@ -11,7 +11,7 @@
         // Specify the number of data sources for this symbol; just a single data source or multiple
         datasourceBehavior: CS.Extensibility.Enums.DatasourceBehaviors.Multiple,
         // Specify the location of an image file to use as the icon for this symbol
-        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/barras.png',
+        iconUrl: '/Scripts/app/editor/symbols/ext/Icons/cmp_barras.png',
         visObjectType: symbolVis,
         // Specify default configuration for this symbol
         getDefaultConfig: function() {
@@ -95,7 +95,7 @@
         // When a data update occurs...
         //************************************
         function myCustomDataUpdateFunction(data) {
-            console.log(scope);
+            // console.log(scope);
             // console.log(data);
             // If there is indeed new data in the update
 
